@@ -1,2 +1,2 @@
 <?php
-echo '¿çÐÐ';
+echo 'KKKK';

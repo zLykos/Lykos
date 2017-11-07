@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公司基本信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/in-base.css">
+    <link rel="stylesheet" href="../css/company-in.css">
+</head>
+<body>
+    <div class="information-Box">
+		                <div class="in-header" id="thumburl1">	
+	                        <from id="fromthumburl" enctype="multipart/form-data">
+	                        	<input  id="imgButton" type="file" class="file-box" name="file" />
+	                        </from><i  class="iconfont camera">&#xe643;</i>
+                        </div>
+
+                        <div class="in-body">
+                            <!--title-->
+                            <div class='header-title'>
+                                <div class="title">基本信息</div>
+                                <div class="lines title"></div>
+                                <div class="title">公司介绍</div>
+                                <div class="lines title lines2"></div>
+                                <div class="title">发展历程</div>
+                                <!--<div class="lines title lines3"></div>
+                                <div class="title">自我评价</div>-->
+                            </div>
+                            <div class="boder"></div>
+                            <form id="company-in" action="">
+                                <div class="information"><input name="companyname" type="text" placeholder="公司名称"></div>
+                                <div class="information phone"><input name="comurl" id="comurl" type="text" placeholder="公司网址"></div>
+                                <select name="industry" id="" class="first-select se-One">
+                                    <option value="">行业归属</option>
+                                    <option value="101">互联网</option>
+                                    <option value="102">移动互联网</option>
+                                </select>
+                                <select name="scale" id="" class="se-One">
+                                    <option value="">公司规模</option>
+                                    <option value="101">20人以下</option>
+                                    <option value="102">20-50人</option>
+                                    <option value="103">50-100人</option>
+                                    <option value="104">100-500人</option>
+                                    <option value="105">500人以上</option>                                    
+                                </select>
+                                <div class="information phone"><input name="hremail" type="text" placeholder="邮箱"></div>
+                                 <select name="city" id="" class="city">
+                                    <option value="">所在城市</option>
+                                    <option value="510100">成都</option>
+                                </select>
+                                 <div class="information phone"><input type="text" name="address" id="company-address" placeholder="公司具体地址"></div>
+                            </form>
+                            <div class="tixoin"></div>
+                            <div type="botton" id="next">下一步</div>
+                        </div>
+                   </div>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/layer/layer.min.js"></script>
+<script src="../js/base.js"></script>
+<script src='../js/company-in.js'></script>
+ <script>
+        $(function () {
+            $("#imgButton").change(function () {
+                var formData = new FormData();
+                formData.append("file", document.getElementById("imgButton").files[0]);
+                formData.append('pictype','avatar_c');   
+                console.log(document.getElementById("imgButton").files[0]);
+                $.ajax({
+                    url: "http://127.0.0.1/mingqi/index.php/file/upload/upsingle",
+                    type: "POST",
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                    	console.log(data);
+                        if (data.status == "1") {
+                            $("#thumburl1").html('<img src="http://127.0.0.1/mingqi/public/uploads/'+data.url+'"/>');
+                            $(".in-header").addClass("in-header2")
+                        }
+                        if (data.status == "0") {
+                            alert(data.msg);
+                        }
+                       
+                    },
+                    error: function () {
+                        alert("上传失败！");
+                    }
+                });
+            });
+        });
+    </script>
+<!--[if IE 8]> 
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]-->
+</body>

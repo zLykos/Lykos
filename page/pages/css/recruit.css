@@ -1,0 +1,90 @@
+.in-text-title{
+    /*border: 1px solid red;*/
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.information-first {
+     display: block; 
+    margin-top: 15px;
+    text-align: left;
+    line-height: 20px;
+}
+.f-nirst {
+     text-align: left; 
+    line-height: 20px;
+    overflow: hidden;
+}
+.in-text-title>div{
+   float: left;
+   font-size: 18px;
+}
+.in-text-title2{
+  margin-left: 20px;   
+}
+.first-job{
+   border-bottom: 2px dashed #ececec;
+    padding-bottom:10px; 
+}
+.first-job-title{
+    display: flex ;
+    justify-content: space-between;
+    padding-top:15px; 
+}
+.job-podtions{
+    color: #13fa81 \9;
+    color: #13fa81;
+}
+.news{
+    display: inline-block;
+    background: #13fa81 \9;
+    background: #13fa81;
+    width: 25px;
+    height: 25px;
+    border-radius:25px;
+    text-align: center;
+    line-height: 25px;
+}
+.news>i{
+    color: white;
+}
+.company-name{
+    color: #13fa81 \9;
+    color:#13fa81 ;
+   font-size: 18px;
+   text-align: left;
+    /*border: 1px solid black;*/
+    width: 30%
+}
+.salary{
+    font-size: 16px;
+    color: #47b1d3 \9;
+    color: #47b1d3;
+}
+.first-job-section{
+    padding-top:10px; 
+}
+.first-job-section-text{
+  color: black;
+  font-size: 14px;
+}
+.job-first-text{
+    display: flex;
+    justify-content: space-between;
+}
+.job-first-text2{
+   padding: 10px 0 0 0;
+}
+.little-text>span{
+  display: inline-block;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.page{
+    margin-top: 40px ;
+}
+.large-box {
+    background: #f9f9f9;
+     border: none; 
+}

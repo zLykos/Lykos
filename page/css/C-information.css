@@ -1,0 +1,326 @@
+.little-header{
+    background: #4eb2e7;
+}
+.three-three{
+    height: 200px;
+}
+.groom{
+    font-size: 16px;
+    padding-left:28px; 
+    border-bottom: 1px solid #cccccc;
+}
+.perfect{
+    border: none;
+    margin-top: 20px;
+    padding: 20px 0 20px 0;
+    background: white;
+}
+.circle{
+    width: 54px;
+    height: 54px;
+    border-radius: 54px;
+    background: #cccccc;
+     /*border: 1px solid red;*/
+}
+.groom-name{
+    display: flex;
+    justify-content: space-between;
+}
+.groom-name-text {
+    /* border: 1px solid red; */
+    width: 130px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.groom-name-text2 {
+    text-align: right;
+    /*border: 1px solid red;*/
+    margin-left: 30px;
+    margin-top: -20px;
+    font-size: 12px;
+}
+.groom-litbox{
+    padding: 19px 0 10px 0;
+    border-bottom:1px dashed #cccccc;
+}
+.head{
+    width: 115px;
+    height: 115px;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    border-radius: none;
+    behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+    background:#0e8ed5; 
+    border: 5px solid white;
+    /*float: left;*/
+    margin-left: 18px;
+    margin-top: 40px;
+    /*border: 1px solid red;*/
+}
+.head>img{
+    width: 100%;
+    height: 100%;
+}
+.heade-text{
+    /*border: 1px solid red;*/
+    text-align: left;
+    width: 509px;
+    margin-left: 140px;
+    margin-top: -125px;
+    font-size: 12px
+    /*float: left;*/
+}                                                                                               
+.foush {
+    /*border: 1px solid red;*/
+    width: 70%;
+    
+}
+#modal-footer{
+  border-top:none;
+ text-align: center;
+}
+textarea {
+     overflow: hidden; 
+    width: 80%;
+    margin: 20px 0 0 10%;
+    margin-left: 10%;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+#mytextarea{
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.bianji-information{
+    display: none
+}
+.bianji1:hover{
+ color: #7cd296;
+ cursor: pointer
+}
+.bianji2:hover{
+ color: #7cd296;
+ cursor: pointer
+}
+.delete {
+    color: #7cd296;
+    /* border: 1px solid red; */
+    margin: 0% 0 0 90%;
+}
+.foush>div {
+    /*margin-left: 5px;*/
+    font-size: 12px;
+    float: left;
+}
+.basic-information{
+    width: 90%;
+    margin-left: 5%;
+    border-top: 1px solid #eeeeee;
+    margin-top: 47px;
+    overflow: hidden;
+}
+.little-header>i{
+    font-size: 25px;
+}
+.chenge-form{
+    display: none;
+}
+#xiu-btn{
+    background: #7cd296;
+    color: white;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px ;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.information-first{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 20px;
+}
+.f-nirst{
+    text-align: center;
+    line-height: 20px;
+    overflow: hidden;
+}
+.f-nirst>span{
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.cirlic{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+    background:#0e8ed5;
+    margin-top: 5px; 
+}
+.passages{
+    margin-top: 20px;
+    font-size: 12px;
+}
+.map{
+    margin-top: 20px;
+    font-size: 12px;
+    width: 99%;
+    height: 206px;
+    /*border: 1px solid red;*/
+    /*margin-left: 2%*/
+}
+.fp-text{
+     /*border: 1px solid red;*/
+     width: 50%;
+     margin-left: 90px;
+     margin-top: -15px;
+}
+.fp-add{
+    margin: 20px;
+}
+.fp-add:hover{
+    cursor: pointer;
+    color: #4eb2e7;
+}
+#position{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.head-icon{
+    font-size: 16px;
+}
+.dian{
+    font-size: 12px;
+    color: #eeeeee;
+}
+.link{
+    font-size: 25px;
+    color: #a6a6a6;
+}
+@media screen and (min-width:1600px){
+  .foush {
+    /*border: 1px solid red;*/
+    width: 75%;
+    
+  }
+}
+@media screen and (max-width:1440px){
+  .foush>span {
+    margin-left: 0px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:1366px){
+  .foush {
+      /*border: 1px solid red;*/
+      width: 55%;
+      display: block;
+  }
+  .foush>span {
+    margin-left: 0px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:1024px){
+    .v-circle{
+         width: 50px;
+         height: 50px;
+        border-radius: 50px; 
+        background:#0e8ed4; 
+    }
+    .v-heade-text {
+        font-size: 12px;
+        margin-left: 8px;
+        width: 40px;
+        margin-top: 10px;
+        /*border: 1px solid red;*/
+        text-align: center;
+    }
+    .t-btn {
+      width: 50px;
+      height: 25px;
+      border: 1px solid #c6c6c6;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 28px;
+      float: right;
+      margin-top: 9px;
+      margin-right: 15px;
+      background: white;
+      color: black;
+      position: relative;
+      z-index: 1;
+      line-height: 25px;
+      text-align: center;
+      font-size: 12px;
+  }
+  .groom-name-text {
+    /*border: 1px solid red; */
+     width: 80px; 
+     height: 30px; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: 0; 
+ }
+ .groom-name-text2 {
+    text-align: right;
+    /* border: 1px solid red; */
+     margin-left: 0px; 
+    margin-top: 10px;
+    font-size: 12px;
+ }
+ .foush {
+      /*border: 1px solid red;*/
+      width: 40%;
+      display: block;
+  }
+}
+
+@media screen and (max-width: 800px){
+   .heade-text{
+         /*border: 1px solid red;*/
+         text-align: left;
+         width: 509px;
+         margin-left: 140px;
+         margin-top: -100px;
+         /*float: left;*/
+    } 
+    .heade-text>p{
+        display: none;
+    }
+    h1{
+        display: block;
+    }
+    .foush{
+          /*border:1px solid red;*/
+          display: none;
+    }
+    .map{
+          margin-top: 20px;
+         font-size: 12px;
+         width: 90%;
+         height: 150px;
+    /*border: 1px solid red;*/
+         margin-left: 5%
+   }
+}
+.footer{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom:20px;
+    padding-top:20px;  
+}

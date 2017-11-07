@@ -1,0 +1,120 @@
+form{
+    margin: 20px 0 0 0;
+}
+textarea{
+    width: 80%;
+    height: 200px;
+}
+.add{
+    margin-left:10%; 
+    width: 80%;
+    /*border: 1px solid red;*/
+    margin-top: 20px;
+    text-align: right;
+}
+.header-title{
+    margin-left: 20%;
+}
+@media screen and (max-width: 500px){
+    .add{
+        margin-top: 10px;
+    }
+    textarea{
+    width: 80%;
+    height: 100px;
+   }
+   form{
+    margin: 30px 0 0 0;
+   }
+   .header-title {
+    width: 90%;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    /* border-color: #4eb2e8 #68ed90; */
+    margin-left: 5%;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    }
+}
+@media screen and (max-width:1024px){
+    .header-title {
+    width: 90%;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    /* border-color: #4eb2e8 #68ed90; */
+    margin-left: 15%;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    }
+    .lines{
+    border: 1px dashed #aeaeae;
+    margin-top: 25px;
+    width: 0;
+   }
+   .add{
+        margin-top: 10px;
+    }
+    textarea{
+    width: 80%;
+    height: 100px;
+   }
+   form{
+    margin: 30px 0 0 0;
+   }
+   .in-header{
+       margin: 30px 0 0 32%;
+   }
+}
+@media screen and (max-width: 800px){
+    .information-Box{
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+    .header-title{
+    width: 90%;
+    border-bottom: 1px solid #13c9a0 ;
+    margin-left: 35%;
+    margin-top: 10px;
+    /*display: flex;
+    justify-content: space-between;*/
+    line-height: 50px;
+    position: relative;
+ }   
+ .in-header{
+       margin: 30px 0 0 40%;
+   }
+}
+@media screen and (min-width:1600px){
+    .header-title {
+    width: 90%;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    /* border-color: #4eb2e8 #68ed90; */
+    margin-left: 25%;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    }
+}
+@media screen and (max-width: 500px){
+    .header-title {
+    width: 90%;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    /* border-color: #4eb2e8 #68ed90; */
+    margin-left: 15%;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    }
+}

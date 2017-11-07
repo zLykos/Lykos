@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/enroll.css">
+</head>
+<body>
+       <div class="container section">
+           <div class="row">
+               <div class="col-12 col-md-12 col-sm-12 col-xs-12">
+                   <div class="enroll-text">
+                       <!--头部-->
+                       <div class="enroll-header">
+                           <div><img src="../images/enroll/logo.png" alt=""></div>
+                           <div class="enroll-header-text">
+                               <span class="enroll-header-text"><a href="http://www.lykos.com/pages/psl-register.html">使用手机注册</a></span>&nbsp;&nbsp;&nbsp;
+                               <span class="enroll-header-text"><a href="http://www.lykos.com/pages/psl-register_mailbox.html">使用邮箱注册</a></span>
+                           </div>
+                       </div>
+                       <div class="lines"></div>
+                       <!--信息-->
+                       <form id="enroll" action="" class="enroll-message">
+                               <div class="phone-number">
+                                   <i class="iconfont phone ">&#xe625;</i>
+                                   <input name="mailbox" id="mailbox" type="text" placeholder="请输入您的邮箱号">
+                               </div>
+                               <div class="phone-number password">
+                                   <i class="iconfont phone ">&#xe624;</i>
+                                   <input name="user_pwd" id="user_pwd" type="password" placeholder="请输入密码">
+                               </div>
+                               <div class="phone-number password identifying">
+                                   <i class="iconfont phone ">&#xe62f;</i>
+                                   <input  id="user_code" name="user_code" type="text" placeholder="验证码">
+                                       <input type="button" id="getMsgCode" value="获取验证码" onclick="settime()" />
+                               </div>
+                               <span id="spantx"></span>
+                               <input name="gateway" type="hidden" value="mqyc">
+                               <input name="type" type="hidden" value="puser">
+                               <div class='tixoin'>注册成功</div>
+                               <div typeof="button" id="btn" onclick="register()">注册</div>
+                           </form>
+                       <div class="other">
+                           <div class="dashed"></div>
+                           <div class="other-text">or</div>
+                           <div class="dashed right"></div>
+                       </div>
+                       <!--其他登录方式-->
+                       <div class="other-login">
+                           <span><i class="iconfont three-icon ">&#xe609;</i></span>
+                           <span><i class="iconfont three-icon ">&#xe71d;</i></span>
+                           <span><i class="iconfont three-icon ">&#xe618;</i></span>
+                       </div>
+                       <div class="last-text">已有账号 <a href="psl-password-SignIn.html">直接登录</a></div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   <footer></footer>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/layer/layer.min.js"></script>
+<script src="../js/psl/psl-register_mailbox.js"></script>
+
+</body>
+</html>

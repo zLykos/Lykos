@@ -1,0 +1,45 @@
+
+.the-img-box{
+    background: #7cd296;
+    text-align: center;
+    height: 270px;
+    line-height: 270px;
+    margin-top: 20px;
+}
+.the-ev-header{
+    font-size: 18px ;
+    padding-top: 30px;
+    /*color: red;*/
+}
+.the-img-box>img{
+    width: 200px;
+}
+p{
+    padding-top: 20px ;
+    font-size: 18px;
+    text-align: center
+}
+.ev-btn{
+    background: #7cd296;
+    width: 200px;
+    height: 40px;
+    border-radius:20px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 40%;
+    margin-top: 40px;
+}
+.ev-btn:hover{
+    cursor: pointer
+}
+.ev-btn>a{
+    color: white
+}
+.footer {
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    overflow: hidden;
+}

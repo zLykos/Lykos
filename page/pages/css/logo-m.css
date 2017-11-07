@@ -1,0 +1,266 @@
+.section{
+    background: url("../images/enroll/background.jpg");
+    width: 100%
+}
+.pa-lo{
+    color: black;
+margin-right: 10px;
+}
+.enroll-text{
+       /*border: 1px solid red;*/
+       /*height: 719px;*/
+       width: 30%;
+       margin-top: 80px ;
+       margin-left: 35%;
+      background: white ;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; 
+    behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+}
+.enroll-header{
+    text-align: center;
+}
+.enroll-header>div>img{
+    margin-top: 20px;
+    width: 203px;
+}
+.lines{
+    width: 100%;
+    /*margin-left: 5%;*/
+    border: 1px solid #62b4db;
+    border-color:#62b4db #5ac4ca #50dab1 #45f099; 
+    margin-top: 20px;
+}
+.enroll-header-text{
+    font-size: 16px;
+    margin-top: 15px;
+    color: rgb(102,102,102);
+}
+.enroll-message{
+    /*border: 1px solid red;*/
+    margin-left: 10%;
+    margin-top: 25px;
+}
+input{
+    border: none;
+    height: 100%;
+    margin-left: 19px ;
+    outline:none
+}
+.phone-number{
+    border: 1px solid grey;
+    height: 44px;
+    width: 85%;
+    border-radius: 5px;
+}
+.password{
+     margin: 5% 0 0 0;
+}
+.phone-number>span{
+    display: inline-block;
+}
+.phone{
+    /*border: 1px solid red;*/
+    font-size: 16px;
+    padding: 18px 0 0 18px;
+}
+/*验证码*/
+.identifying>input{
+    width: 40%;
+}
+.identifying>span{
+    float: right;
+    padding: 0 0 0 8px ;
+    font-size: 12px;
+    border-left: 1px solid black;
+    color:#50dab1;
+    margin-right: 5px;
+    margin-top: 15px;
+}
+.identifying>span:hover{
+    color:#60bbd5;
+    cursor: pointer;
+}
+.identifying>span>img{
+    /*width: 100%;*/
+    /*border:1px solid red;*/
+    height: 44px;
+    margin-left: 13.5px;
+}
+.identifying>div>img {
+    width: 120px;
+    height: 42px;
+    border: 1px solid grey;
+}
+/*按钮*/
+#btn{
+    text-align: center;
+    line-height: 46px;
+    width: 85%;
+    height: 46px;
+    background: #50dab1;
+    margin: 57px 0 0 0;
+    font-size: 18px;
+    color: white;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+    behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+
+
+}
+.forgot-password{
+    text-align: right;
+    margin-right: 14%;
+    margin-top: 10px;
+    /*border:1px solid red;*/
+}
+.forgot-password>a{
+    text-decoration: 1px solid black;
+}
+.other-login {
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.other{
+    width: 75%;
+    margin: 10% 0 0 12%;
+    /*border: 1px solid red ;*/
+}
+.dashed{
+    border-bottom: 1px dashed black;
+    float: left;
+    width: 40%;
+    height: 100%;
+    margin-top: 10px ;
+}
+.other-text{
+    margin-left: 50%;
+}
+.right{
+    float: right;
+    margin-top: -10px;
+}
+/*其他注册登录方式*/
+.three-icon{
+    font-size: 30px;
+    margin-left: 17%;
+}
+.three-icon:hover{
+    color: #60bbd5;
+    cursor: pointer;
+}
+#btn:hover{
+    background: #60bbd5;
+    cursor: pointer;
+}
+.last-text{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.last-text>a{
+    color: #50dab1;
+}
+.ident-img{
+    /*width: 60px;*/
+    height: 44px;
+    margin-left: 14.5px;
+   border: 1px solid black ;
+       float: right;
+
+}
+#getMsgCode{
+	float: right;
+    padding: 0 0 0 10px;
+    font-size: 10px;
+    border-left: 1px solid black;
+    color: #50dab1;
+    margin-right: 15px;
+    margin-top: 15px;
+    width: 70px;
+    height: 20px;
+    background: none;
+    
+}
+#getMsgCode:hover{
+    color:#60bbd5;
+    cursor: pointer;
+}
+@media screen and (max-width: 1600px){
+    #btn{
+        margin: 30px 0 0 0;
+    }
+}
+@media screen and (max-width: 800px) {
+    .enroll-text{
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+    input{
+        border: none;
+        height: 100%;
+        width: 150px;
+        margin-left: 19px ;
+        outline:none
+    }
+    .phone-number{
+        width: 90%;
+    }
+    .enroll-message{
+        margin-left: 30px;
+    }
+    .identifying>input{
+        width: 100px;
+    }
+    .identifying>span{
+        padding: 0 2px  0 2px  ;
+    }
+    .enroll-header>div>img{
+        margin-top: 20px;
+        width: 150px;
+    }
+    #btn{
+        width: 91%;
+        /*margin-left: 2px;*/
+        margin-top: 20px ;
+    }
+    .other{
+        width: 80%;
+        margin: 10px 0 0 50px;
+    }
+    .dashed{
+        width: 80px;
+    }
+    .other-text{
+        margin-left: 120px;
+    }
+    .right{
+        margin-right: 50px;
+    }
+    .three-icon{
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    .other-login{
+     text-align: center;
+    }
+}
+@media screen and (max-width: 330px){
+    .other-text{
+        margin-left: 85px;
+    }
+    .three-icon{
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .last-text{
+        text-align: center;
+        /*border: 1px solid red ;*/
+        margin-top: -3px;
+        font-size: 1rem;
+    }
+}

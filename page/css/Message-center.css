@@ -1,0 +1,28 @@
+.all{
+    font-size: 18px ;
+    color: #7cd296
+}
+.feedback{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 35px 0 35px 
+}
+.first-conent {
+    background: #f9f9f9;
+    /* height: 112px; */
+    margin-top: 20px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    /* line-height: 112px; */
+    padding: 0 0 30px 0;
+}
+.feedback-icon{
+    color: #7cd296;
+}
+.more-like{
+    text-align: right;
+    padding-top: 10px;
+}
+.more-like>a{
+     color: #7cd296;
+}

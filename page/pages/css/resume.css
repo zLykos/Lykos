@@ -1,0 +1,485 @@
+body{
+   background: none;
+}
+.master{
+    margin-top: 30px;
+}
+.large-box{
+     background: #f9f9f9;
+    border: 1px solid #ececec;
+}
+.little-box{
+    height: 500px;
+}
+.large-box-header{
+    background: -moz-linear-gradient(left, #7cd296 0%, #4eb2e8 100%);
+    background: -webkit-gradient(linear, left top, left top, color-stop(0%,#7cd296), color-stop(100%,#4eb2e8));
+    background: -webkit-linear-gradient(top, #7cd296 0%,#4eb2e8 100%);
+    background: -o-linear-gradient(left, #7cd296 0%,#4eb2e8 100%);
+    background: -ms-linear-gradient(left, #7cd296 0%,#4eb2e8 100%);
+    background: linear-gradient(to right, #7cd296 0%,#4eb2e8 100%);
+    height: 120px;
+    width: 100%;
+}
+.head-portrait{
+    width: 115px;
+    height: 115px;
+    -webkit-border-radius: 115px;
+    -moz-border-radius: 115px;
+    border-radius: 115px;
+    behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+    background:#0e8ed5; 
+    border: 5px solid white;
+    margin-left: 40%;
+    margin-top: -13%;
+}
+textarea {
+    width: 80%;
+    height: 100px;
+    margin-top: 18px;
+}
+.modal-footer{
+    border-top: none;
+    text-align: center
+}
+.quxiao{
+  background: #4eb2e8;
+  color: white
+}
+#tinajia-skill{
+    padding: 20px 0 30px 0;
+
+}
+.tinajia-skill{
+    display: none
+}
+.skill-language>input{
+   width: 50%;
+   height: 30px;
+   border:  1px solid #cccccc;
+}
+.Mastery{
+    margin-top: 20px;
+}
+.Mastery>select{
+    width: 50%;
+    height: 30px ;
+    border: 1px solid #ccc;
+}
+.baocun{
+    color: white;
+    background: #7cd296
+}
+.delete-skill{
+    color: black;
+    margin: -10% 0 0 100%;
+    width: 50px;
+}
+.delete-skill:hover{
+    color: red;
+    cursor: pointer;
+}
+.delete{
+    color: #7cd296;
+    /*border: 1px solid red ;*/
+    margin: 5% 0 0 90%
+}
+.delete:hover{
+    color: red;
+    cursor: pointer;
+}
+.head-portrait>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+}
+#conent{
+    text-align: center;
+}
+.hello-word{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.simple-in{
+    /*border: 1px solid red;*/
+    margin-top: 20px;
+}
+.simple-little{
+    margin-left: 10px;
+}
+#essential-information{
+         overflow: hidden;
+         text-align: center;
+         /*border: 1px solid red;*/
+         margin-top : 23px;
+         font-size: 12px
+
+}
+#essential-information>div{
+     float: left;
+     /*margin-left: 55px;*/
+     
+}
+.first-ess{
+    margin-left: 16%
+}
+.second-ess{
+    margin-left: 5%
+}
+#practice{
+    /*border: 1px solid red;*/
+}
+.practice-one{
+      text-align: center;
+      margin-top: 49px;
+      /*border: 1px solid red;*/
+      padding: 0 10px 0 10px;
+}
+.practice-one>span{
+     display: inline-block;
+}
+.first-line{
+    width: 25%;
+    border: 1px solid #eee;
+}
+.practice-text{
+    height: 35px;
+    width: 90px;
+    background: #eee;
+    text-align: center;
+    line-height: 35px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+    font-size: 14px;
+}
+.editor{
+    color: #16f07b;
+}
+.editor:hover{
+	cursor: pointer;
+}
+.rem-icon{
+    font-size: 12px;
+}
+.company-com{
+    font-size: 16px; 
+    font-weight: 500;
+}
+.company-an{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0 25px 0 25px;
+    font-size: 16px;
+}
+#job-time{
+    text-align: right;
+    padding: 0 25px 0 25px;
+    font-size: 12px;
+}
+#major-time{
+    text-align: right;
+    padding: 0 25px 0 25px;
+    font-size: 12px
+}
+.describe{
+    margin-top: 19px;
+    font-size: 14px;
+     padding: 0 25px 0 25px;
+}
+select{
+    border: none;
+}
+form{
+    margin-top: 30px;
+}
+/*lable{
+    margin-left:55px;
+}*/
+.progress-title{
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    /*margin: 0 0 20px;*/
+}
+.progress{
+    height: 10px;
+    background: #eee;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible;
+    border-radius: 5px;
+}
+.progress .progress-bar{
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s;
+    border-radius: 5px;
+}
+
+.progress .progress-value{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7cd497;
+    position: absolute;
+    top: -30px;
+    right: -25px;
+}
+#skill{
+   margin-top: 20px;
+   /*border: 1px solid black;*/
+   width: 100%;
+   height: 300px;
+}
+.progress-bar1{
+    width: 25%
+}
+.progress-bar2{
+    width: 50%
+}
+.progress-bar3{
+    width: 75%
+}
+.progress-bar4{
+     width: 100%
+}
+#conent-footer{
+  width: 100%;
+  height: 100px;
+  background: #f5f5f5;
+  /*border: 1px solid red;*/
+  overflow: hidden;
+  border-bottom: 2px solid #eee;
+  box-shadow: 5px #dbdbdb; 
+}
+.job-practice{
+	display: none;
+}
+#conent-footer>form{
+       text-align: center;
+       border: 1px solid #e1e1e1;
+       width: 300px;
+       height: 44px;
+       margin-left:24%;
+       margin-top: 30px;
+}
+#conent-footer>form>select{
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+#conent-footer>form>select>option{
+     text-align: center
+}
+.last-box{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    background: white;
+    letter-spacing: 2px;
+}
+@-webkit-keyframes animate-positive{
+    0%{ width: 0; }
+}
+@keyframes animate-positive {
+    0%{ width: 0; }
+}
+   
+.little-header{
+    background: #7cd497;
+    width: 100%;
+    height: 59px;
+    color: white;
+    padding-left:25px; 
+    /*text-align: center;*/
+    line-height: 59px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.three-three{
+    width: 100%;
+    height: 150px;
+    background: #f9f9f9;
+    text-align: left;
+    padding-left:28px; 
+    line-height: 50px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.little-icon{
+    padding-right:5px; 
+    color: #9a9a9a
+}
+.perfect{
+    border: 1px solid #f0f0f0;
+    margin-top: 20px;
+    padding: 20px 0 20px 0;
+    background: #f9f9f9;
+}
+.perfect-one{
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    color: #7cd497;
+}
+.perfect-two{
+    width: 90%;
+    height: 8px;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 13px;
+}
+.perfect-text{
+     font-size: 12px;
+}
+.perfect-w{
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-top:22px; 
+}
+.little-box-nav{
+    margin: 20px 0 0 0;
+    text-align: left;
+    padding-left: 44px;
+    font-size: 16px;
+    border-left:1px solid #cccccc;
+}
+.xs-little{
+    padding:30px 0 0 0; 
+}
+.footer{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom:20px;
+    padding-top:20px;  
+}
+@media screen and (max-width: 800px){
+    .first-header{
+        display: none;
+    }
+    .second-header{
+         display: none;
+    }
+    .master{
+        margin-top: 0;
+    }
+    h1{
+        display: none;
+    }
+    h3{
+        display: block;
+    }
+    .little-box{
+        display: none;
+    }
+    .large-box-header{
+               height: 80px;
+    }
+    .head-portrait{
+              width: 50px;
+              height: 50px;
+              margin-left: 47%;
+              /*margin-top: -19%;*/
+              margin-top: -30px;
+              -webkit-border-radius: 50px;
+               -moz-border-radius: 50px;
+              border-radius: 50px;
+              behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+             border: 2px solid white;
+    }
+    #essential-information{
+        margin-top: 15px;
+    }
+    #essential-information>div{
+            float: left;
+            /*border: 1px solid red;*/
+     /*margin-left: 55px;*/
+     
+    }
+    .first-ess{
+           margin-left: 28%;    
+    }
+    .second-ess{
+           margin-left: 20%
+    }
+    .simple-in{
+          /*border: 1px solid red;*/
+           margin-top: 15px;
+    }
+    .hello-word{
+         font-size: 16px;
+         letter-spacing: 1px;
+    }
+    .first-line{
+      width:25%;
+    }
+    .practice-text{
+        height: 20px;
+        width: 80px;
+        background: #eee;
+        text-align: center;
+        line-height: 20px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+        font-size: 12px;
+    }
+    .editor{
+         font-size: 12px;
+          color: #16f07b;
+    }
+    .editor:hover{
+    	cursor: pointer;
+    }
+    .company-com{
+       font-size: 12px; 
+        font-weight: 500;
+   }
+   .company-an{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding: 0 15px 0 15px;
+    }
+    .describe{
+       margin-top: 13px;
+       font-size: 12px;
+       padding: 0 15px 0 15px;
+    }
+    lable{
+        margin-left:10px;
+        font-size: 20px;
+    }
+    form{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    #skill-assessment{
+        display: none
+    }
+    #conent-footer>form{
+       text-align: center;
+       border: 1px solid #e1e1e1;
+       width: 200px;
+       height: 30px;
+       margin-left: 30%;
+       margin-top: 30px;
+    }
+    .last-box{
+       display: flex;
+       justify-content: space-between;
+       padding-top: 20px;
+       background: white;
+       letter-spacing: 2px;
+       font-size: 12px;
+    }
+}

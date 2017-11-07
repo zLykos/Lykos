@@ -1,0 +1,116 @@
+.search-header{
+   width: 100%;
+   /*background: white;*/
+}
+.large-box{
+    background: white;
+    border: none ;
+}
+#vaite-conent{
+    background: #f9f9f9;
+}
+#search-input{
+    width: 70%;
+    height: 34px;
+    border: 1px solid #7bd396;
+}
+#search-btn{
+    float: right;
+    width: 30%;
+    height: 34px;
+    color: white;
+    /*margin-right: 1px;*/
+    /*border: 1px solid red;*/
+    text-align: center;
+    font-size: 18px;
+    line-height: 34px;
+    background: -moz-linear-gradient(left, #7cd296 0%, #4eb2e8 100%);
+    background: -webkit-gradient(linear, left top, left top, color-stop(0%,#7cd296), color-stop(100%,#4eb2e8));
+    background: -webkit-linear-gradient(top, #7cd296 0%,#4eb2e8 100%);
+    background: -o-linear-gradient(left, #7cd296 0%,#4eb2e8 100%);
+    background: -ms-linear-gradient(left, #7cd296 0%,#4eb2e8 100%);
+    background: linear-gradient(to right, #7cd296 0%,#4eb2e8 100%);
+}
+.popular{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 15 px;
+}
+.pop-job{
+    color: #7cd296;
+}
+#first-positionHead{
+    margin-top: 36px;
+    padding: 12px 0 0 20px;
+    /*border: 1px solid black;*/
+}
+#positionHead{
+    background: #fafafa;
+}
+
+.work-space>a{
+    width: 35px;
+    height: 16px;
+    border-radius: 5px;
+    padding: 1px 5px;
+    margin-left: 5px;
+}
+#more>i,#four-more{
+     color: #05a2d0;
+}
+#more:hover,#four-more:hover{
+    cursor: pointer;
+    /*color: red;*/
+}
+.more-box{
+    width: 100%;
+    display: none;
+    /*border: 1px solid red ;*/
+}
+#more-box>a,#more-box2>a{
+  padding: 3px 5px;
+}
+.all-city{
+    margin-left: 20px;
+    color: #7cd296;
+}
+#second-positionHead,#third-positionHead,#fif-positionHead{
+    padding-left:20px; 
+    margin-top: 15px;
+}
+#positionHead{
+    border: 1px solid #eeeeee;
+}
+#third-positionHead{
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom:13px; 
+}
+#four-positionHead{
+    background: white;
+    padding: 8px 0 8px 20px;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 0 5px #eeeeee; 
+
+}
+.work-space>lable{
+    /*border: 1px solid red;*/
+    margin-left: 10px;
+}
+.work-space>select{
+    border: 1px solid #eeeeee;  
+}
+#fif-positionHead{
+    padding-bottom:10px; 
+}
+#vaite-conent{
+    margin-top: 34px;
+}
+.footer{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom:20px;
+    padding-top:20px;  
+}

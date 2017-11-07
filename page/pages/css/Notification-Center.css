@@ -1,0 +1,26 @@
+.N-header{
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    background: white;
+    /*border: 1px solid red;*/
+}
+.break{
+    color: #7cd497;
+}
+.groom{
+   background: #eee;
+   padding: 10px 0 10px 10px;
+}
+.little-icon{
+    font-size: 20px;
+}
+.deliver{
+    color: #7cd497;
+    font-size: 16px;
+}
+.zhong{
+   color: white;
+   font-size: 20px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>企业历程</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/in-base.css">
+    <link rel="stylesheet" href="../css/Company-H.css">
+</head>
+<body>
+    <div class="information-Box">
+                        <div id="thumburl1" class="in-header">
+                        	<from id="fromthumburl" enctype="multipart/form-data">
+                        		<input  id="imgButton" type="file" class="file-box" name="file" />
+                        	</from>
+                        	<i  class="iconfont camera">&#xe643;</i>
+                        </div>
+                        <div class="in-body">
+                            <!--title-->
+                            <div class='header-title'>
+                                <div class="title">基本信息</div>
+                                <div class="lines title"></div>
+                                <div class="t itle">公司介绍</div>
+                                <div class="lines title lines2"></div>
+                                <div class="title">发展历程</div>
+                                <!--<div class="lines title lines3"></div>
+                                <div class="title">自我评价</div>-->
+                            </div>
+                            <div class="boder"></div>
+                            <form id="company-h" action="" name="myform">
+
+                                <div class="information phone"><input type="text" name="time" id="event-time" placeholder="时间"></div>
+                                <div class="information phone"><input type="text" name="title" id="event-time" placeholder="标题"></div>
+                                <textarea name="description" id="title" placeholder="请输入50字简单说下公司的历程吧"  wrap="virtual" onkeypress="return(this.value.length<50)" onkeydown="textlen(this,50)" onkeyup="textlen(this,50)" onblur="maxtext(this,50)"></textarea>
+                            </form>
+                                <div class="add">
+                                    <a href="company-about.html">返回</a>
+                                </div>
+                            <div type="botton" id="next">下一步</div>
+                        </div>
+                   </div>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/layer/layer.min.js"></script>
+<script src="../js/base.js"></script>
+<script src='../js/Company-H.js'></script>
+<!--[if IE 8]> 
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]-->
+</body>

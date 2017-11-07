@@ -1,0 +1,180 @@
+.carousel-indicators{
+    position: absolute;
+    bottom: 30px;
+    left: 45%;
+    z-index: 15;
+    width: 10%;
+    padding-left: 0;
+    /* margin-left: -30%; */
+    text-align: center;
+    list-style: none;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #0d8dd4;
+    border-radius: 10px;
+}
+.searchs{
+   padding: 58px 0 58px 0;
+}
+#search-input{
+    width: 70%;
+    height: 50px;
+    border: 1px solid #7bd396;
+}
+#search-btn{
+    float: right;
+    width: 30%;
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+    background: -moz-linear-gradient(left, #7cd296 0%, #4eb2e8 100%);
+    background: -webkit-gradient(linear, left top, left top, color-stop(0%,#7cd296), color-stop(100%,#4eb2e8));
+    background: -webkit-linear-gradient(top, #7cd296 0%,#4eb2e8 100%);
+    background: -o-linear-gradient(left, #7cd296 0%,#4eb2e8 100%);
+    background: -ms-linear-gradient(left, #7cd296 0%,#4eb2e8 100%);
+    background: linear-gradient(to right, #7cd296 0%,#4eb2e8 100%);
+}
+.popular{
+    width: 90%;
+    /*display: flex;
+    justify-content: space-around;*/
+    margin-top: 10px;
+     font-size: 16px;
+}
+.pop-job{
+    color: #7cd296;
+    margin-left: 30px;
+   
+}
+.second-header{
+    height: 76px;
+}
+#first-positionHead{
+    margin-top: 36px;
+    padding: 12px 0 0 20px;
+    /*border: 1px solid black;*/
+}
+#positionHead{
+    background: #fafafa;
+}
+
+.work-space>a{
+    width: 35px;
+    height: 16px;
+    border-radius: 5px;
+    padding: 1px 5px;
+    margin-left: 5px;
+}
+#more>i,#four-more{
+     color: #05a2d0;
+}
+#more:hover,#four-more:hover{
+    cursor: pointer;
+    /*color: red;*/
+}
+.more-box{
+    width: 100%;
+    display: none;
+    /*border: 1px solid red ;*/
+}
+#more-box>a,#more-box2>a{
+  padding: 3px 5px;
+}
+.all-city{
+    margin-left: 20px;
+    color: #7cd296;
+}
+#second-positionHead,#third-positionHead,#fif-positionHead{
+    padding-left:20px; 
+    margin-top: 15px;
+}
+#positionHead{
+    border: 1px solid #eeeeee;
+}
+#third-positionHead{
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom:13px; 
+}
+#four-positionHead{
+    background: white;
+    padding: 8px 0 8px 20px;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 0 5px #eeeeee; 
+
+}
+.work-space>lable{
+    /*border: 1px solid red;*/
+    margin-left: 10px;
+}
+.work-space>select{
+    border: 1px solid #eeeeee;  
+}
+#fif-positionHead{
+    padding-bottom:10px; 
+}
+.list-postion{
+    margin-top: 30px;
+    overflow: hidden;
+}
+.first-postion-box{
+    margin-top: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.first-postion-box>div{
+   width:250px ;
+   /*height: 200px ;*/
+   float: left;
+   border: 1px solid #ebebeb;
+}
+.first-text-box{
+    padding: 10px 0 0 0; 
+}
+.text-heade{
+    display: flex;
+    justify-content: space-around;
+}
+.the-heade{
+    width: 60px;
+    height: 60px;
+    border: 1px solid red;
+}
+.first-text-text{
+    padding: 10px;
+}
+.head-icon{
+   font-size: 12px;
+}
+.foush{
+    padding: 12px 0 10px 0;
+    font-size: 12px;
+    /*border: 1px solid red;*/
+    margin-top: 20px;
+    background: #fafafa \9;
+    background: #fafafa;
+}
+.job-box{
+    /*border: 1px solid red;*/
+    overflow: hidden;
+}
+.footer{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom:20px;
+    padding-top:20px;  
+}
+.page{
+    margin-top: 40px ;
+}

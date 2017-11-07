@@ -1,0 +1,41 @@
+#next {
+    width: 80%;
+    height: 44px;
+    text-align: center;
+    line-height: 35px;
+    background: #7cd296;
+    color: white;
+    font-size: 18px;
+     margin-left: 0; 
+    margin-top: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(../doc/ie-css3.htc);
+}
+.file-box{
+   position: absolute;
+    top: -40%;
+    left: -40%;
+    z-index: 2;
+    width: 150px ;
+    height: 150px ;
+    border-radius:150px ;
+    text-align: center;
+    line-height: 100px;
+    opacity: 0;
+}
+.in-header{
+    position: relative;
+}
+.camera{
+    position: absolute;
+    top:0;
+    left: 20%;
+    z-index: 1;
+}
+#errmessage{
+    color: red;
+    margin-top: 10%;
+    text-align: center
+}

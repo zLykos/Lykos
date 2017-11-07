@@ -1,0 +1,195 @@
+.vaite-header{
+     /*border: 1px solid red ;*/
+     width: 80%;
+     display: flex;
+     justify-content: space-between;
+     padding: 20px 0 0 0;
+}
+.vaite-title{
+    font-size: 16px;
+}
+.nominate{
+    border-left: 1px solid #9f9f9f;
+    padding-left: 5px; 
+}
+form{
+   margin-top:0; 
+}
+#vaite-conent{
+    padding: 20px 0 20px 0;
+}
+.v-heade{
+    width: 10%;
+    /*border: 1px solid red;*/
+    margin-left: 6px;
+    padding: 15px 0 0 0;
+}
+.v-circle{
+    width: 62px;
+    height: 62px;
+    border-radius: 62px; 
+    background:#0e8ed4; 
+}
+.v-heade-text{
+    font-size: 14px;
+    margin-left:15px; 
+    margin-top: 10px;
+}
+.vaite-text{
+        width: 85%;
+        margin-left: 15%;
+        margin-top: -100px;
+        overflow: hidden;
+        font-size: 12px;
+}
+.v-imformation{
+    padding: 15px 18px 0 15px ; 
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.v-line{
+    width: 100%;
+    border: 1px solid #c6c6c6;
+    margin-top: 15px;
+}
+.three-btn{
+    text-align: right;
+    overflow: hidden;
+}
+.t-btn{
+    width: 72px; 
+    height: 28px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 28px;
+    float: right;
+    margin-top: 9px;
+    margin-right: 15px;
+    background: white;
+    color: black;
+    position: relative;
+    z-index: 1;
+    line-height: 28px;
+    text-align: center;
+}
+.t-btn:hover{
+    cursor: pointer;
+    background: #0e8ed4;
+    color: white;
+}
+.active{
+    background: #0e8ed4;
+    color: white;
+}
+input{
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    height: 28px;
+    line-height: 28px;
+    margin: 0
+}
+label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 72px;
+    height: 28px;
+    z-index: 3;
+    opacity: 0;
+    margin: auto;
+    display: inline-block;
+    line-height: 28px;
+    cursor: pointer;
+}
+.t-btn>span{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 72px; 
+    height: 28px;
+    z-index: 2;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    line-height: 28px;
+}
+.footer{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom:20px;
+    padding-top:20px;  
+}
+.groom-name-text2 {
+    text-align: right;
+    /*border: 1px solid red;*/
+    margin-left: 30px;
+    margin-top: -20px;
+    font-size: 12px;
+}
+.groom-name-text {
+    /* border: 1px solid red; */
+    width: 130px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+@media screen and (max-width:1024px){
+    .v-circle{
+         width: 50px;
+         height: 50px;
+        border-radius: 50px; 
+        background:#0e8ed4; 
+    }
+    .v-heade-text {
+        font-size: 12px;
+        margin-left: 8px;
+        width: 40px;
+        margin-top: 10px;
+        /*border: 1px solid red;*/
+        text-align: center;
+    }
+    .t-btn {
+      width: 50px;
+      height: 25px;
+      border: 1px solid #c6c6c6;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 28px;
+      float: right;
+      margin-top: 9px;
+      margin-right: 15px;
+      background: white;
+      color: black;
+      position: relative;
+      z-index: 1;
+      line-height: 25px;
+      text-align: center;
+      font-size: 12px;
+  }
+  .groom-name-text {
+    /*border: 1px solid red; */
+     width: 80px; 
+     height: 30px; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: 0; 
+ }
+ .groom-name-text2 {
+    text-align: right;
+    /* border: 1px solid red; */
+     margin-left: 0px; 
+    margin-top: 10px;
+    font-size: 12px;
+ }
+}

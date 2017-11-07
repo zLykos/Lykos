@@ -1,0 +1,197 @@
+<extend name="./Apps/Home/View/default/users/layout.html" />
+<block name="content">
+<link rel="stylesheet" href="__ROOT__/Apps/Home/View/{$WST_STYLE}/css/userorder.css" />
+
+    <div class="wst-body"> 
+       
+	   <div class="wst-order-userinfo-box" style="">
+	   		<div class="wst-userimg-box">
+	   			<img class='lazyImg' data-original="<empty name="WST_USER['userPhoto']">__ROOT__/Apps/Home/View/{$WST_STYLE}/images/logo.png<else/>{:WSTImgPath($WST_USER['userPhoto'])}</empty>" height="100" width="100" />
+	   		</div>
+	   		<div class="wst-userlogin-box">
+	   			<div><span style="font-size:16px;">欢迎您：</span><span style="font-weight:bolder;color:#fff100;">{$WST_USER["loginName"]}</span><if condition='$WST_USER["userRank"]["rankName"] neq ""'>({$WST_USER["userRank"]['rankName']})</if></div>
+	   			<div>上次登录时间：{$WST_USER["lastTime"]}</div>
+	   			<div>上次登录IP：{$WST_USER["lastIP"]}</div>
+	   			<div class="wst-user-adr">
+	   				<div>我的积分：<a  href="{:U('Home/Users/toScoreList/')}"><span style="font-weight:bolder;color:#fff100;">{$userScore}</span></a> 个</div>
+	   				<a style="color:#ffffff;" href="{:U('Home/UserAddress/queryByPage/')}">我的收货地址</a>&nbsp;&nbsp;&nbsp;
+	   				<a href="{:U('Home/Users/toEdit/')}" style="color:#ffffff;">编辑个人资料</a>
+	   			</div>
+	   		</div>
+	   		<div class="wst-clear"></div>
+	   </div>
+	   
+       <div class="wst-order-tg">
+       		<div class="wst-oinfo-box">
+       			<div style="">
+       			<div style="float:left;width:110px;">待付款<a href="{:U('Home/Orders/queryPayByPage/')}"><span>{$statusList[-2]}</span></a></div>
+       			<div style="float:left;width:108px;border-left:1px solid #cccccc;border-right:1px solid #cccccc;">待发货<a href="{:U('Home/Orders/queryDeliveryByPage/')}"><span>{$statusList[2]}</span></a></div>
+       			<div style="float:left;width:108px;border-left:1px solid #cccccc;border-right:1px solid #cccccc;">待收货<a href="{:U('Home/Orders/queryReceiveByPage/')}"><span>{$statusList[3]}</span></a></div>
+       			<div style="float:left;width:108px;border-left:1px solid #cccccc;border-right:1px solid #cccccc;">待评价<a href="{:U('Home/Orders/queryAppraiseByPage/')}"><span>{$statusList[4]}</span></a></div>
+       			<div style="float:left;width:110px;">退款<a href="{:U('Home/Orders/queryRefundByPage/')}"><span>{$statusList[-3]}</span></a></div>
+       			<div class="wst-clear"></div>
+       			</div>
+       		</div>
+       </div>
+       <div class="wst-mywl">
+       		<img src="__ROOT__/Apps/Home/View/{$WST_STYLE}/images/icon_top_03.png"  /><span style="color:#ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;我的订单</span>
+       </div>
+       <div style="margin-top:10px;padding:5px;">
+       		<table class="wst-order-list">
+	       <thead>
+		      <tr class="head">
+		         <th>订单详情</th>
+		         <th>支付方式/配送</th>
+		         <th>金额</th>
+		         <th>操作</th>
+		      </tr>
+		   </thead>
+		   <volist name="orderList['root']" id="order" key='key1'>
+		 	<tbody class="j-order-row">          
+			 	<tr class="empty-row">             
+				 	<td colspan="4">&nbsp;</td>          
+				 </tr>          
+				 <tr class="order-head">             
+				 	<td colspan="4" align="right">               
+				 	<div class="time">{$order["createTime"]}</div>               
+				 	<div class="orderno">订单号：{$order["orderNo"]}
+				 		<if condition='$order["orderFrom"] eq 2'>
+				 		<img src="__ROOT__/Apps/Home/View/{$WST_STYLE}/images/tuan.png" height="30" />
+				 		<elseif condition='$order["orderFrom"] eq 3'/>
+				 		<img src="__ROOT__/Apps/Home/View/{$WST_STYLE}/images/qian.png" height="30" />
+				 		</if>
+				 	</div>               
+				 	<div class="shop"><a href="{:U('Home/Shops/toShopHome/',array('shopId'=>$order['shopId']))}" target="_blank">{$order["shopName"]}</a></div>               
+				 	<div class="link">
+				 		<if condition="$order['qqNo'] neq ''">
+							<a href="tencent://message/?uin={$order['qqNo']}&Site=QQ交谈&Menu=yes">
+								<img border="0" src="http://wpa.qq.com/pa?p=1:{$order['qqNo']}:7" alt="QQ交谈" width="71" height="24" />
+							</a>
+						</if>
+				 	</div>               
+				 	<div>
+				 		<?php if($order['isAppraises']==1){ ?>
+								已评价
+						<?php }else{ ?>
+							<if condition='($order["orderStatus"] lt 0) and ($order["orderStatus"] neq -2)'>
+								<?php if($order["payType"] >= 1 && $order["isPay"]==1){ ?>
+									<?php if($order["orderStatus"]==-4){ ?>
+									已退款
+									<?php }else{ ?>
+									退款中
+									<?php } ?>
+								<?php }else{ ?>
+									已取消
+								<?php } ?>
+	       					<elseif condition='$order["orderStatus"] eq -5'/>商家不同意退款
+			               	<elseif condition='$order["orderStatus"] eq -2'/>未付款
+			               	<elseif condition='$order["orderStatus"] eq -11'/>已关闭
+			               	<elseif condition='$order["orderStatus"] eq 0'/>未受理
+			               	<elseif condition='$order["orderStatus"] eq 1'/>已受理
+			               	<elseif condition='$order["orderStatus"] eq 2'/>打包中
+			               	<elseif condition='$order["orderStatus"] eq 3'/>配送中
+			               	<elseif condition='$order["orderStatus"] eq 4'/>已到货
+			               	</if>
+			            <?php } ?>
+					</div>             
+				 	</td>          
+				 </tr>
+				 <volist name="order['goodslist']" id="goods" key='key2'>                
+				 <tr class="goods-box">             
+				 	<td>                
+				 		<div class="goods-img">
+				 			<?php if($order['orderFrom']==2){ ?>
+                         		<a href="{:U('Home/Groups/getGoodsDetails/',array('id'=>$order['orderFromId']))}" target="_blank">
+                         	<?php }else if($order['orderFrom']==3){ ?>
+                         		<a href="{:U('Home/Panics/getGoodsDetails/',array('id'=>$order['orderFromId']))}" target="_blank">
+                       		<?php }else{ ?>
+                           		<a href="{:U('Home/Goods/getGoodsDetails/',array('goodsId'=>$goods['goodsId']))}">
+                         	<?php } ?>
+								<img data-original="__ROOT__/{$goods['goodsThums']}" class='lazyImg' title="{$goods['goodsName']}"/>
+							</a>
+				 		</div>
+				 		<div class="goods-name">
+					 		<div>{$goods['goodsName']}</div>
+					 		<div>{$goods['goodsAttrName']}</div>
+				 		</div>                
+				 		<div class="goods-extra">{$goods['goodsPrice']} x {$goods['goodsNums']}</div>             
+				 	</td>
+				 	<if condition="$key2==1">
+				 	<td rowspan="<?php echo count($order['goodslist']) ?>">                 
+					 	<div>{$order["payType"]==0?"货到付款":($order["payType"]==2?"钱包支付":"在线支付")}</div>                 
+					 	<div>{$order["isSelf"]==1?"自提":"送货上门"}</div>
+				 	</td>             
+				 	<td rowspan="<?php echo count($order['goodslist']) ?>">                 
+					 	<div>商品金额：¥{$order["totalMoney"]}</div>                 
+					 	<div class="line">运费：¥{$order["deliverMoney"]}</div>                 
+					 	<div>实付金额：¥{$order["realTotalMoney"]}</div>             
+				 	</td>        
+				 	<td rowspan="<?php echo count($order['goodslist']) ?>">                 
+					 	<div><a href="javascript:;" onclick="showOrder({$order['orderId']})">【订单详情】</a></div>
+						<if condition='$order["orderStatus"] gt 3'>
+							<if condition="$order['isAppraises'] eq 0">
+								<div><a  href="javascript:;" onclick="appraiseOrder({$order['orderId']})">【评价】</a></div>
+							</if>
+						</if>
+       					<if condition='$order["payType"] eq 1'>
+       						<if condition='$order["orderStatus"] eq -2'>
+       							<div><a href="javascript:;" onclick="toPay({$order['orderId']})">【去支付】</a></div>
+       						</if>
+       					</if>
+						<?php if(($order["orderStatus"] == 0) || ($order["orderStatus"] == -2) || ($order["orderStatus"] == 1) || ($order["orderStatus"] == 2) || ($order["orderStatus"] == 3)){ ?> 
+							<?php if($order["payType"] >= 1 && $order["isPay"]==1){ ?> 
+							<div><a href="javascript:;" onclick="refund({$order['orderId']})">【退款】</a></div>
+							<?php }else{ ?>
+							<div><a href="javascript:;" onclick="orderCancel({$order['orderId']},{$order['orderStatus']})">【取消订单】</a></div>
+							<?php } ?>
+       					<?php } ?>
+						<div><a href='{:U("Home/OrderComplains/complain",array("orderId"=>$order["orderId"]))}'>【投诉】</a></div>   
+				 	</td>
+				 	</if>                    
+			 	</tr>
+			 	</volist>                
+		 	</tbody>                
+		 	</volist>
+	       <tbody><tr class="empty-row">
+	            <td colspan="4" id="pager" align="center" style="padding:5px 0px 5px 0px">
+	            	<div class="wst-page" style="float:right;padding-bottom:10px;">
+						<div id="wst-page-items"></div>
+					</div>
+	            </td>
+	       </tr>
+	    </tbody>
+    </table>
+       
+       </div>
+    </div>
+	<script>
+	
+    <if condition="$orderList['totalPage'] gt 1">
+    $(document).ready(function(){
+    	laypage({
+    	    cont: 'wst-page-items',
+    	    pages: {$orderList['totalPage']}, //总页数
+    	    skip: true, //是否开启跳页
+    	    skin: '#e23e3d',
+    	    groups: 3, //连续显示分页数
+    	    curr: function(){ //通过url获取当前页，也可以同上（pages）方式获取
+    	        var page = location.search.match(/pcurr=(\d+)/);
+    	        return page ? page[1] : 1;
+    	    }(), 
+    	    jump: function(e, first){ //触发分页后的回调
+    	        if(!first){ //一定要加此判断，否则初始时会无限刷新
+    	        	var nuewurl = WST.splitURL("pcurr");
+    	        	var ulist = nuewurl.split("?");
+    	        	if(ulist.length>1){
+    	        		location.href = nuewurl+'&pcurr='+e.curr;
+    	        	}else{
+    	        		location.href = '?pcurr='+e.curr;
+    	        	}
+    	            
+    	        }
+    	    }
+    	});
+    })
+	</if>
+	</script>
+</block> 

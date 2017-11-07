@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*矢量图标引入*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}         
+.first-header{
+    height: 28px;
+    background: -moz-linear-gradient(left, #7cd296 0%, #4eb2e8 100%);
+    background: -webkit-gradient(linear, left top, left top, color-stop(0%,#7cd296), color-stop(100%,#4eb2e8));
+    background: -webkit-linear-gradient(top, #7cd296 0%,#4eb2e8 100%);
+    background: -o-linear-gradient(left, #7cd296 0%,#4eb2e8 100%);
+    background: -ms-linear-gradient(left, #7cd296 0%,#4eb2e8 100%);
+    background: linear-gradient(to right, #7cd296 0%,#4eb2e8 100%);
+    display: flex ;
+    justify-content: space-around;
+}
+.phone{
+ color: #1093d2;
+ font-size: 16px;
+}
+.left-text{
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+.app{
+    padding: 0 6px 0 0; 
+}
+.come-into{
+    border-left: 1px solid white;
+    padding: 0 0 0 6px;
+    
+}
+.come-into>a{
+   color: white;
+}
+.right-text{
+ line-height: 28px;
+}
+.little-text{
+   
+    border-right: 1px solid white;
+    padding: 0 6px 0 6px ;
+    letter-spacing: 1px;
+}
+.little-text>a{
+ color: white;
+}
+.second-header{
+    height: 64px;
+    box-shadow:0 0 10px #d7d7d7;
+    
+}
+.second-header-box{
+    display: flex;
+    justify-content: space-between;
+    line-height: 64px;
+}
+.header-logo>a>img{
+    width: 166px;
+}
+.header-nav>a{
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+    margin-left: 38px;
+}
+.header-nav>a:hover{
+    color: #119ec7;
+    text-decoration: none;
+}
+@media screen and (max-width:800px){
+    .second-header{
+        display: none
+    }
+    .right-text{
+        display: none
+    }
+    .header-xs{
+        display: none
+    }
+}

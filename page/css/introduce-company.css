@@ -1,0 +1,24 @@
+.in-text-title{
+    /*border: 1px solid red;*/
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.information-first {
+     display: block; 
+    margin-top: 15px;
+    text-align: left;
+    line-height: 20px;
+}
+.f-nirst {
+     text-align: left; 
+    line-height: 20px;
+    overflow: hidden;
+}
+.in-text-title>div{
+   float: left;
+   font-size: 18px;
+}
+.in-text-title2{
+  margin-left: 20px;   
+}

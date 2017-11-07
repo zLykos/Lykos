@@ -1,0 +1,74 @@
+.add{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    margin-top: 18px;
+}
+#next1{
+    width: 80%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    background: #7cd296;
+    color: white;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-left: 10%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(../doc/ie-css3.htc); /* 通知IE浏览器调用脚本作用于'enroll-text'类 */
+   
+}
+#next1:hover{
+    background: #4eb2e8;
+    color: white;
+    cursor: pointer
+}
+.ticon{
+    color: #7cd296
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 30%;
+    background: white;
+    margin-left: 35%;
+    margin-top: 220px;
+    border-radius: 5px;
+    height: 400px;
+}
+.modal-footer{
+    border-top: none;
+    text-align: center
+}
+.quxiao{
+  background: #4eb2e8;
+  color: white
+}
+.baocun{
+    color: white;
+    background: #7cd296
+}
+#next {
+    width: 80%;
+    height: 44px;
+    text-align: center;
+    line-height: 35px;
+    background: #7cd296;
+    color: white;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-left: 10%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(../doc/ie-css3.htc);
+}

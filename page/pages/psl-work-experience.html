@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工作经历</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/in-base.css">
+    <link rel="stylesheet" href="../css/Educational.css">
+</head>
+<body>
+     <!--<div class="container section">
+           <div class="row">
+               
+           </div>
+    </div>-->
+    <div class="col-12 col-md-12 col-sm-12 col-xs-12">
+                   <div class="information-Box">
+                       <div class="in-header"><input href="" id="thumburl" type="file" class="file-box"/>
+                           <i name="thumburl" class="iconfont camera">&#xe643;</i></div>
+                        <div class="in-body">
+                            <!--title-->
+                            <div class='header-title'>
+                                <div class="title">基本信息</div>
+                                <div class="lines title"></div>
+                                <div class="title">教育经历</div>
+                                <div class="lines title lines2"></div>
+                                <div class="title" style="color: red;">工作经历</div>
+                                <div class="lines title lines3"></div>
+                                <div class="title">自我评价</div>
+                            </div>
+                            <div class="boder" id="thumburl"></div>
+                            <form id="setperson-express" action="">
+                                <div class="information"><input name="work_cor_name" id="work_cor_name" type="text" placeholder="公司名称"></div>
+                                <div class="information phone"><input name="work_post" id="work_post" type="text" placeholder="所在职位"></div>
+                                <div class="information phone"><input name="work_address" id="work_address" type="text" placeholder="工作地点"></div>
+                                <select name="work_bejintime" id="work_bejintime" class="first-select se-One">
+                                    <option value="">&nbsp;&nbsp;&nbsp;&nbsp;起始时间</option>
+                                    <option value="">博士</option>
+                                    <option value="">硕士</option>
+                                    <option value="">研究生</option>
+                                    <option value="">本科</option>
+                                    <option value="">大专</option>
+                                    <option value="">高中</option>
+                                </select>
+                                <select name="work_endtime" id="work_endtime" class="se-One">
+                                    <option value="">&nbsp;&nbsp;&nbsp;&nbsp;结束时间</option>
+                                    <option value="">1-3年</option>
+                                    <option value="">3-5年</option>
+                                    <option value="">5-10年</option>
+                                    <option value="">10年以上</option>
+                                </select>
+                                <textarea name="work_describe" id="work_describe" placeholder="简单的描述一下你的工作吧"></textarea>
+                            </form>
+                                <div class="add">
+                                    <span  type="button" class="iconfont ticon btn  btn-lg" data-toggle="modal" data-target="#myModal"><a href=""><i class="iconfont ticon">&#xe60a;</i></a>&nbsp;添加工作经历</span>
+                                    <a href="psl-education-experience.html">上一步</a>
+                                </div>
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <form action="" >
+                                        <div class="information"><input name="conpany" type="text" placeholder="公司名称"></div>
+                                        <div class="information phone"><input name="position" type="text" placeholder="所在职位"></div>
+                                        <select name="work_bejintime" id="" class="first-select se-One " >
+                                            <option value="">&nbsp;&nbsp;&nbsp;&nbsp;起始时间</option>
+                                            <option value="">博士</option>
+                                            <option value="">硕士</option>
+                                            <option value="">研究生</option>
+                                            <option value="">本科</option>
+                                            <option value="">大专</option>
+                                            <option value="">高中</option>
+                                        </select>
+                                        <select name="work_endtime" id="" class="se-One">
+                                            <option value="">&nbsp;&nbsp;&nbsp;&nbsp;结束时间</option>
+                                            <option value="">1-3年</option>
+                                            <option value="">3-5年</option>
+                                            <option value="">5-10年</option>
+                                            <option value="">10年以上</option>
+                                        </select>
+                                        <textarea name="" id="" placeholder="简单的描述一下你的工作吧"></textarea>
+                                    </form>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn quxiao" data-dismiss="modal">取消</button>
+                                        <button type="button" class="btn baocun">保存</button>
+                                    </div>
+                                </div>
+                                
+                            <div class="btn1 next3" type="botton" id="next">下一步</div>
+                        </div>
+                   </div>
+               </div>
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/layer/layer.min.js"></script>
+<script src="../js/ajaxfileupload.js"></script>
+<script src='../js/psl/psl-basic-information.js'></script>
+ <script>
+        $(function () {
+            $("#imgButton").change(function () {
+                var formData = new FormData();
+                formData.append("file", document.getElementById("imgButton").files[0]);   
+                console.log(document.getElementById("imgButton").files[0]);
+                $.ajax({
+                    url: "http://127.0.0.1/mingqi/index.php/file/upload/upsingle",
+                    type: "POST",
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                    	console.log(data);
+                        if (data.status == "1") {
+                            $("#thumburl1").html('<img src="http://127.0.0.1/mingqi/public/uploads/'+data.url+'"/>');
+                        }
+                        if (data.status == "0") {
+                            alert(data.msg);
+                        }
+                       
+                    },
+                    error: function () {
+                        alert("上传失败！");
+                    }
+                });
+            });
+        });
+    </script>
+<!--[if IE 8]> 
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]-->
+</body>

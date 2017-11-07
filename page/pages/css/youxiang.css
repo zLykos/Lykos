@@ -1,0 +1,206 @@
+.the-banner{
+    overflow: hidden
+}
+.first-large{
+    /*border: 1px solid red;*/
+    text-align: center;
+    padding: 60px 0 70px 0 ;
+}
+.first-large-header{
+    font-size: 18px;
+}
+.first-circle{
+    /*border: 1px solid red;*/
+    text-align: center;
+    padding: 30px 10px 0 10px ;
+}
+.quality{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 2px solid #ededed;
+    text-align: center;
+    line-height: 100px;
+    margin-left:26%;
+}
+
+.quality-icon{
+    font-size: 50px;
+}
+.quality:hover{
+    cursor: pointer;
+}
+.quality:hover>.quality-icon{
+     color: #7cd296 \9;
+     color: #7cd296;
+}
+.circle-texts{
+   color: #cccccc \9;
+    color: #cccccc;
+}
+.the-pop{
+    background: #f7f7f7 \9;
+    background: #f7f7f7;
+    padding: 60px 0 60px 0;
+}
+.find-pop{
+   text-align: center;
+  
+}
+.pop-list{
+    background: white;
+    margin-top: 60px;
+}
+.list-icon{
+    font-size: 40px;
+}
+.the-list{
+    border: 1px solid #cccccc;
+    padding: 20px 30px 20px 30px;
+    border-top: none;
+    border-left: none;
+    background: white;
+}
+.the-list2{
+    border-bottom:none;
+}
+.the-list3{
+    border-right:none;
+}
+.list-texe{
+  margin-top: 340px;
+  font-size: 18px;
+  padding: 0 0 10px 0;
+}
+.list-btn{
+    border: 2px solid #cccccc;
+    width: 20%;
+    padding: 10px 0 10px 0;
+    margin-left: 40%;
+    margin-top: 10px
+}
+.list-btn:hover{
+  background: #7cd296;
+  cursor: pointer;
+}
+.list-btn:hover>.list-btna{
+    color: white;
+   
+}
+.Design{
+    text-align: center;
+    padding: 50px 0 0 0 ;
+    height: 300px;
+}
+.leder-lens{
+    border: 1px solid #7cd296;
+    width: 80px;
+    margin-left: 45.5%;
+    margin-top: 20px;
+}
+.pop-list3{
+    margin-top: 20px;
+}
+.pop-list2>div{
+    border: 2px solid white;
+    height: 50px;
+    background: #f8f8f8;
+    line-height: 50px;
+}
+.Carousel{
+    background: #f8f8f8;
+    text-align: center;
+    padding-top:50px;
+}
+ul{
+    overflow: hidden;
+}
+li{
+    list-style: none;
+    float: left;
+}
+li>img{
+    width: 250px;
+}
+.float-img{
+    margin-left: 10.5%;
+}
+.carousel-inner{
+    /*border: 1px solid red;*/
+}
+.left-icon{
+    font-size: 50px;
+    color: #7cd296;
+}
+.carousel {
+    position: relative;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+.left-btn{
+    position: absolute;
+    top: 40%;
+    left: -6%;
+    /*border: 1px solid red;*/
+}
+.right-btn{
+    position: absolute;
+    top: 40%;
+    right: -6%;
+}
+.Co-operative{
+   text-align: center;
+   padding: 80px 0 0 0;
+}
+.img-box{
+    margin-top: 30px;
+    /*border: 1px solid red;*/
+}
+.img-box>img{
+    width: 100%;
+}
+@media screen and (max-width: 1600px){
+     .float-img{
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 1440px){
+    .quality{
+          margin-left: 20%
+    }
+    .the-list{
+        padding: 0
+    }
+    li>img{
+       width: 200px;
+    }
+    .float-img{
+               margin-left: 8.2%;
+    }
+}
+@media screen and (max-width: 1366px){
+    
+    /*li>img{
+       width: 150px;
+    }*/
+    .float-img{
+           margin-left: 5.94%;
+    }
+}
+@media screen and (max-width: 800px){
+    .the-banner,.circle-texts{
+        display: none
+    }
+    .quality{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #ededed;
+    text-align: center;
+    line-height: 50px;
+    margin-left:26%;
+  }
+  .quality-icon{
+    font-size: 30px;
+}
+}

@@ -1,3 +1,0 @@
-<?php
-//000031536000a:12:{i:0;a:2:{s:6:"areaId";s:6:"440103";s:8:"areaName";s:9:"荔湾区";}i:1;a:2:{s:6:"areaId";s:6:"440104";s:8:"areaName";s:9:"越秀区";}i:2;a:2:{s:6:"areaId";s:6:"440105";s:8:"areaName";s:9:"海珠区";}i:3;a:2:{s:6:"areaId";s:6:"440106";s:8:"areaName";s:9:"天河区";}i:4;a:2:{s:6:"areaId";s:6:"440111";s:8:"areaName";s:9:"白云区";}i:5;a:2:{s:6:"areaId";s:6:"440112";s:8:"areaName";s:9:"黄埔区";}i:6;a:2:{s:6:"areaId";s:6:"440113";s:8:"areaName";s:9:"番禺区";}i:7;a:2:{s:6:"areaId";s:6:"440114";s:8:"areaName";s:9:"花都区";}i:8;a:2:{s:6:"areaId";s:6:"440115";s:8:"areaName";s:9:"南沙区";}i:9;a:2:{s:6:"areaId";s:6:"440116";s:8:"areaName";s:9:"萝岗区";}i:10;a:2:{s:6:"areaId";s:6:"440183";s:8:"areaName";s:9:"增城市";}i:11;a:2:{s:6:"areaId";s:6:"440184";s:8:"areaName";s:9:"从化市";}}
-?>

@@ -2345,3 +2345,51 @@ response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <statusMsg>验证码超出同模板同号码天发送上限</statusMsg>
 </Response>
 
+request body = <TemplateSMS>
+                    <to>18702824781</to> 
+                    <appId>8a216da85f341b69015f38fcfdc0030c</appId>
+                    <templateId>1</templateId>
+                    <datas><data>2482</data><data>5</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85f341b69015f38fcfd670306/SMS/TemplateSMS?sig=E3E84914BED43A49C7E03DF128328022
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>000000</statusCode>
+    <TemplateSMS>
+        <smsMessageSid>30a9c0e43f7f4e09bfa7b8b88cfb442b</smsMessageSid>
+        <dateCreated>20171108110706</dateCreated>
+    </TemplateSMS>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>18702824781</to> 
+                    <appId>8a216da85f341b69015f38fcfdc0030c</appId>
+                    <templateId>1</templateId>
+                    <datas><data>5975</data><data>5</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85f341b69015f38fcfd670306/SMS/TemplateSMS?sig=98564F7F74F77D2E3AAF653A23A6184C
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>000000</statusCode>
+    <TemplateSMS>
+        <smsMessageSid>571b94fabe4a4ad39a248fb15a6b586e</smsMessageSid>
+        <dateCreated>20171108111347</dateCreated>
+    </TemplateSMS>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>18702824781</to> 
+                    <appId>8a216da85f341b69015f38fcfdc0030c</appId>
+                    <templateId>1</templateId>
+                    <datas><data>9435</data><data>5</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85f341b69015f38fcfd670306/SMS/TemplateSMS?sig=F5024A42A18192BEF487F14D97D407C1
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>000000</statusCode>
+    <TemplateSMS>
+        <smsMessageSid>fc5cbf37f8f14271a6c815209fa8413d</smsMessageSid>
+        <dateCreated>20171108140933</dateCreated>
+    </TemplateSMS>
+</Response>
+

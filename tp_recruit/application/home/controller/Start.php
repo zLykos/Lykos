@@ -9,6 +9,7 @@ class Start extends Basd{
         $callback = $_GET['callback'];
         //用input函数来获取input框数据(从ajax中抓取的数据)
         $phone = input('phone');
+//        var_dump($phone);
         //生成一个1000到9999之间的一个随机数
         $res = mt_rand('1000','9999');
         //把验证码存入session中
@@ -34,9 +35,10 @@ class Start extends Basd{
         if (!$mail->Send()) {
             echo "邮件发送失败. <p>";
             echo "错误原因: " . $mail->ErrorInfo;
+            echo $callback."(1)";
             exit;
         }else {
-            echo $callback."邮件发送成功";
+            echo $callback."(0)";
         }
     }
 
@@ -46,6 +48,7 @@ class Start extends Basd{
         $phone = input('phone');
         //生成一个1000到9999之间的一个随机数验证码
         $res = mt_rand('1000','9999');
+        var_dump($res);
         //把验证码存入session中
         Session::set('phoneCode',$res);
         //给指定的手机发送消息

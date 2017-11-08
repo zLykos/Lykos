@@ -7,7 +7,7 @@ class Photo extends Basd
     {
         if ((($_FILES["file"]["type"] == "image/gif")
                 || ($_FILES["file"]["type"] == "image/jpeg")
-                || ($_FILES["file"]["type"] == "imagepeg"))
+                || ($_FILES["file"]["type"] == "image/peg"))
             && ($_FILES["file"]["size"] < 2000000)
         ) {
             if ($_FILES["file"]["error"] > 0) {
@@ -23,9 +23,9 @@ class Photo extends Basd
             } else {
                 $typeName = explode('.', $_FILES["file"]["name"]);
                 $img = time() . '.' . $typeName[1];
-                Session::set('imgName', $img);
+//                Session::set('imgName', $img);
 
-                if (file_exists("upload/" . $img)) {
+                if (file_exists("./static/img/" . $img)) {
                     $data = array(
                         'error' => null,
                         'msg' => 'file already exists',
@@ -37,7 +37,7 @@ class Photo extends Basd
 
                 } else {
                     move_uploaded_file($_FILES["file"]["tmp_name"],
-                        "static/img/" . $img);
+                        "./static/img/" . $img);
 
                     $data = array(
                         'error' => null,
@@ -45,7 +45,7 @@ class Photo extends Basd
                         'imgurl' => 'http://www.text.com/static/img/'.$img,
                     );
                     $imgurl = 'http://www.text.com/static/img/' . $img;
-                    Session::set('timeImg', $imgurl);
+//                    Session::set('timeImg', $imgurl);
                     $url = 'http://www.lykos.com/pages/Photo.php';
                     $data = json_encode($data);
                     header('Location:' . $url . '?data=' . $data);
@@ -54,6 +54,7 @@ class Photo extends Basd
                     exit;
                 }
                 exit;
+
             }
         } else {
 

@@ -36,6 +36,7 @@ $(document).ready(function () {
              //console.log(study);
             //基本信息
             for(i=0; i<message.length;i++){
+                $("#user_portrait").attr('src',message[i]['user_portrait']);
                 $("#name").html(message[i]['user_name']);
                 $("#user_sex").html(message[i]['user_sex']);
                 $("#user_age").html(message[i]['user_age']);

@@ -38,7 +38,7 @@ function register() {
     var user_pwd = $("#user_pwd").val();
     //手机号验证
     if(mailbox==""){
-        layer.msg('手机号码不能为空，请输入手机号...', {icon: 2});
+        layer.msg('邮箱号码不能为空，请输入手机号...', {icon: 2});
         return false;
     }
     //密码验证
@@ -63,11 +63,10 @@ function register() {
         success:function (data) {
             if(data == 0 ){
                 $.cookie('user',mailbox);
-                window.location.href="http://www.lykos.com/pages/serch-job.html";
+                window.location.href="http://www.lykos.com/pages/psl-basic-information.html";
             }
             if(data == 1 ){
                 layer.msg('注册失败.请重新输入...', {icon: 2});
-                //alert("注册失败");
                 return false;
             }
             if(data == 2 ){

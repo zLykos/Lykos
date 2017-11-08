@@ -64,7 +64,7 @@ function register() {
         success:function (data) {
                 if (data == 0) {
                     $.cookie('user', phone);
-                    window.location.href = "http://www.lykos.com/pages/serch-job.html";
+                    window.location.href = "http://www.lykos.com/pages/psl-basic-information.html";
                 }
                 if (data == 1) {
                     layer.msg('注册失败.请重新输入...', {icon: 2});

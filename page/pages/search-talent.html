@@ -13,30 +13,7 @@
     <link rel="stylesheet" href="../css/search.css">
 </head>
 <body>
-            <!--头部-->
-             <div class="col-lg-12 col-md-12 col-ms-12 col-xs-12 first-header">
-                      <div class="left-text">
-                          <i class="iconfont phone">&#xe6d1;</i>
-                          <span class="app"><a href="">名企APP</a></span>
-                          <span class="come-into"><a href="">进入企业版</a></span>
-                      </div>
-                      <div></div>
-             </div>
-             <div class="col-lg-12 col-md-12 col-ms-12 col-xs-12 second-header">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 second-header-box">
-                        <div class="header-logo">
-                            <img src="../images/enroll/logo.png" alt="">
-                        </div>
-                        <div>
-                            <span class="header-nav"><a href="" style="color:#119ec7">首页</a></span>
-                            <span class="header-nav"><a href="">公司</a></span>
-                            <span class="header-nav"><a href="">职位</a></span>
-                            <span class="header-nav"><a href="">优单</a></span>
-                            <span class="header-nav"><a href="">社区</a></span>
-                            <span class="header-nav"><a href="">测评</a></span>
-                       </div>
-                    </div>
-             </div>
+<div id="header"></div>
              <div class="col-lg-12 col-md-12 col-ms-12 col-xs-12">
                  <div class="master col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
                        <div class="large-box col-lg-8 col-md-8">
@@ -415,6 +392,9 @@
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/jquery.cookie.js"></script>
 <script src="../js/layer/layer.min.js"></script>
-        <script src="../js/search.js"></script>
+<script>
+    $("#header").load('headercpy.html');
+    $("#footer").load('footer.html');
+</script>
 </body>
 </html>

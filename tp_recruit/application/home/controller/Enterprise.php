@@ -7,49 +7,6 @@ use think\Loader;
 use think\Request;
 use think\captcha\Captcha;
 class Enterprise extends Basd{
-    //手机注册
-    public function entRegister(){
-        $request = Request::instance();
-        //获取get的参数
-        $callback = $request->get('callback');
-        //获取输入的手机号
-        $data['ent_phone'] = $request->get('ent_phone');
-        //获取输入的密码数字
-        $pwd = $request->get('ent_pwd');
-        //生成一个加密4位数
-        $rand = mt_rand('1000', '9999');
-        //获取保存到数据库的密码(双重加密)
-        $data['ent_pwd'] = md5($pwd.$rand);
-        //获取IP地址
-        $data['ent_ip'] = $request->ip();
-        //提取当前时间
-        $data['ent_time'] = time();
-        //user_rand字段
-        $data['ent_rand'] = $rand;
-        //判断该邮箱是否注册过
-        $model = new EnterpriseModel();
-        $phone = $model->phone($data['ent_phone']);
-        if(!$phone){
-            $code = $request->get('ent_code');
-            $phoneCode = Session::get('phoneCode');//调用session
-            if($code == $phoneCode){
-                //清除Session
-                Session::delete('phoneCode');
-                $res = $model->sigInsert($data);
-                if($res){
-                    $row = $model->phone($data['ent_phone']);
-                    Session::set("ent_id",$row['id']);
-                    echo $callback . "(0)";
-                }else{
-                    echo $callback . "(1)";
-                }
-            }else{
-                echo $callback . "(2)";
-            }
-        }else{
-            echo $callback . "(3)";
-        }
-    }
     //邮箱注册
     public function mailboxRegister(){
         $request = Request::instance();

@@ -56,6 +56,9 @@ b,
 strong {
   font-weight: bold;
 }
+#img1{
+  border-radius: 100%;
+}
 dfn {
   font-style: italic;
 }

@@ -1,33 +1,31 @@
 //头像
 $(function(){
-    $("#fromthumburl").change(function(){
+    $("#file1").change(function(){
         Photo();
     })
 });
 function Photo(){
     $.ajaxFileUpload({
-        url:'http://www.text.com/index.php/home/Photo/verificationCode',//请求的地址
+        url:'http://www.text.com/home/Photo/verificationCode',//请求的地址
         secureuri: false, //是否需要安全协议，一般设置为false
         fileElementId: 'file1', //文件上传域的ID
         dataType: 'jsonp', //返回值类型 一般设置为json
         async : true,
-        cuccess:function(data,status){
+        success:function(data,status){
             var obj = JSON.parse(data);//把json字符串转换为json对象
-            console.log(obj);
-          /*  $("#img1").attr("src", obj.imgurl);
+            $("#img1").attr("src", obj.imgurl);
             if (typeof (data.error) != 'undefined') {
                 if (data.error != '') {
                     alert(data.error);
                 } else {
                     alert(data.msg);
                 }
-            }*/
-
+            }
         },
         error: function (data, status, e)//服务器响应失败处理函数
         {
-            alert(e);
-        },
+            alert("e");
+        }
     })
 }
 $(document).ready(function(){
@@ -35,6 +33,7 @@ $(document).ready(function(){
     //基本信息
     $(".next1").click(function(){
         var data1 = {};
+        data1.user_portrait=$("#img1").attr('src');
         data1.user_name=$("#user_name").val();
         data1.user_age=$("#user_age").val();
         data1.user_phone=$("#user_phone").val();
@@ -47,7 +46,7 @@ $(document).ready(function(){
         data1.user_sex=$("#user_sex").val();
         //把数据压入key中
         localStorage.setItem('info1',JSON.stringify(data1));
-        window.location.href = "http://www.lykos.com/pages/psl-education-experience.html";
+       window.location.href = "http://www.lykos.com/pages/psl-education-experience.html";
     });
     //教育经历
     $(".next2").click(function (){

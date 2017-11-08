@@ -30,7 +30,7 @@ class RegisterModel extends Model{
         return $res;
     }
     public function backPassword($phone,$password,$rand){
-        $res = Db::table('mq_user_register')->where('phone',$phone)->update(['user_pwd'=>$password],["rand"=>$rand]);
+        $res = Db::table('mq_user_register')->where('phone',$phone)->update(['user_pwd'=>$password,'user_rand'=>$rand]);
         //        echo "<pre>";
 //        echo RegisterModel::getLastSql($res);
 //        var_dump($res);

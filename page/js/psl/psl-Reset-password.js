@@ -21,7 +21,7 @@ $(document).ready(function(){
                 dataType: "jsonp",
                 success: function (data) {
                     if(data==0){
-                        //window.location.href="http://www.lykos.com/pages/psl-password-SignIn.html"
+                        window.location.href="http://www.lykos.com/pages/psl-password-SignIn.html"
                     }else if(data==1){
                         layer.msg('修改失败.请重新修改...', {icon: 2});
                         return false;

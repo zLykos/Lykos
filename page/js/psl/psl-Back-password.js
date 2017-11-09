@@ -59,7 +59,7 @@ $(document).ready(function(){
                         window.location.href="http://www.lykos.com/pages/psl-Reset-password.html";
                     }
                     if( data == 2 ){
-                        layer.msg('验证码错误', {icon: 2});
+                        layer.msg('用户不存在...', {icon: 2});
                         $("#captcha").attr("src","http://www.text.com/index.php/home/Start/verificationCode?a="+Math.random());
                         return false;
                     }
@@ -68,7 +68,7 @@ $(document).ready(function(){
                         return false;
                     }
                     if( data == 4 ){
-                        layer.msg('用户不存在...', {icon: 2});
+                        layer.msg('验证码错误...', {icon: 2});
                         return false;
                     }
 

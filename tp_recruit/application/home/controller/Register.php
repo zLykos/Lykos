@@ -9,9 +9,6 @@ use think\captcha\Captcha;
 class Register extends Basd
 {
     //手机注册
-    /**
-     *
-     */
     public function userRegister()
     {
         $request = Request::instance();
@@ -55,7 +52,6 @@ class Register extends Basd
             echo $callback . "(3)";
         }
     }
-
     //邮箱注册
     public function mailboxRegister()
     {
@@ -218,7 +214,7 @@ class Register extends Basd
             echo $callback."(4)";
         }
     }
-
+    //找回密码(修改)
     public function backPassword(){
         $request = Request::instance();
         $callback = $request->get('callback');

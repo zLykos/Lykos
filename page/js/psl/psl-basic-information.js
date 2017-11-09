@@ -43,7 +43,9 @@ $(document).ready(function(){
         data1.user_degree=$('#user_degree option:selected').text();
         data1.user_mailbox=$("#user_mailbox").val();
         data1.user_address=$("#user_address").val();
+        data1.user_time=$("#user_time").val();
         data1.user_sex=$("#user_sex").val();
+        data1.user_study=$("#user_study").val();
         //把数据压入key中
         localStorage.setItem('info1',JSON.stringify(data1));
        window.location.href = "http://www.lykos.com/pages/psl-education-experience.html";

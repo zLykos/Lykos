@@ -7,19 +7,8 @@ class EnterpriseModel extends Model{
         $res = Db::name('mq_enter_register')->insert($data);
         return $res;
     }
-    public function phone($phone){
-        $res = Db::table('mq_enter_register')->where("phone",$phone)->find();
-        return $res;
-    }
     public function mailbox($mailbox){
         $res = Db::table('mq_enter_register')->where("ent_mailbox",$mailbox)->find();
-        return $res;
-    }
-    public function phoneSignIn($phone){
-        $res = Db::table('mq_enter_register')->where("phone",$phone)->find();
-//        echo "<pre>";
-//        echo RegisterModel::getLastSql($res);
-//        var_dump($res);
         return $res;
     }
     public function mailboxSignIn($mailbox){
@@ -27,6 +16,21 @@ class EnterpriseModel extends Model{
 //        echo "<pre>";
 //        echo RegisterModel::getLastSql($res);
 //        var_dump($res);
+        return $res;
+    }
+    public function backPassword($ent_mailbox,$password,$rand){
+        $res = Db::table('mq_enter_register')->where('ent_mailbox',$ent_mailbox)->update(['ent_pwd'=>$password,'ent_rand'=>$rand]);
+        //        echo "<pre>";
+//        echo RegisterModel::getLastSql($res);
+//        var_dump($res);
+        return $res;
+    }
+    public function searchTalent(){
+//        echo RegisterModel::getLastSql($res);
+        $res = Db::table('mq_user_message')
+        ->alias('a')
+        ->join('mq_user_resume b','a.user_id = b.user_id')
+        ->select();
         return $res;
     }
 }

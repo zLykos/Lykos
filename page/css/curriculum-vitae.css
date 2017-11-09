@@ -30,6 +30,11 @@ form{
     border-radius: 62px; 
     background:#0e8ed4; 
 }
+.v-circle>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
 .v-heade-text{
     font-size: 14px;
     margin-left:15px; 

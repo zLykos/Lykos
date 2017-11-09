@@ -24,7 +24,7 @@
                  <div class="right-text" id="gou">
                      <span id="hello"></span>
                      <span class="little-text"><a href="">消息</a></span>
-                     <span class="little-text"><a href="http://www.lykos.com/pages/psl-My-resume.html">我的简历</a></span>
+                     <span class="little-text"><a href="http://www.lykos.com/pages/psl-resume-state.html">我的简历</a></span>
                      <span class="little-text"><a href="">投递箱</a></span>
                      <span class="little-text"><a href="">收藏夹</a></span>
                      <span class="little-text"><a href="" id="SignOut">注销</a></span>
@@ -36,12 +36,12 @@
                             <a href="./serch-job.html"><img src="../images/enroll/logo.png" alt=""></a>
                         </div>
                         <div>
-                            <span class="header-nav"><a href="./serch-job.html" style="color:#119ec7">首页</a></span>
-                            <span class="header-nav"><a href="">公司</a></span>
-                            <span class="header-nav"><a href="">职位</a></span>
-                            <span class="header-nav"><a href="">优单</a></span>
+                            <span class="header-nav"><a href="" style="color:#119ec7">首页</a></span>
+                            <span class="header-nav"><a href="http://www.lykos.com/pages/search-company.html">公司</a></span>
+                            <span class="header-nav"><a href="http://www.lykos.com/pages/serch-job.html">职位</a></span>
+                            <span class="header-nav"><a href="http://www.lykos.com/pages/youxiang.html">优单</a></span>
                             <span class="header-nav"><a href="">社区</a></span>
-                            <span class="header-nav"><a href="">测评</a></span>
+                            <span class="header-nav"><a href="http://www.lykos.com/pages/psl-Evaluation.html">测评</a></span>
                         </div>
                  </div>
                  
@@ -52,6 +52,26 @@
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/jquery.cookie.js"></script>
 <script src="../js/layer/layer.min.js"></script>
-<script src="../js/Quote.js"></script>
+<script>
+    //判断是否登录过和注销(个人的)
+    $(document).ready(function(){
+        var login = $.cookie('user');
+        $("#hello").html('您好，'+"<a href='http://www.lykos.com/pages/psl-My-resume.html'>"+login+"</a>");
+        if(login == 'null' || login == undefined){
+            $("#signIn").show();
+            $("#gou").hide();
+        }else{
+            $("#gou").show();
+            $("#signIn").hide();
+        }
+        //注销
+        $("#SignOut").click(function(){
+            if(confirm("确定退出吗？")){
+                $.cookie('user',null);
+            }
+            $("#signIn").show();
+        });
+    });
+</script>
 </body>
 </html>

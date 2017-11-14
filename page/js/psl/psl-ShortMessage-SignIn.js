@@ -62,10 +62,12 @@ $(document).ready(function(){
                         return false;
                     }
                     if(data == 3){
+                        $("#captcha").attr("src","http://www.text.com/index.php/home/Start/verificationCode?a="+Math.random());
                         layer.msg('手机验证码错误...', {icon: 2});
                         return false;
                     }
                     if( data == 4 ){
+                        $("#captcha").attr("src","http://www.text.com/index.php/home/Start/verificationCode?a="+Math.random());
                         layer.msg('用户不存在...', {icon: 2});
                         return false;
                     }

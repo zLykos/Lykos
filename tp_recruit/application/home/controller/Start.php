@@ -48,7 +48,6 @@ class Start extends Basd{
         $phone = input('phone');
         //生成一个1000到9999之间的一个随机数验证码
         $res = mt_rand('1000','9999');
-        var_dump($res);
         //把验证码存入session中
         Session::set('phoneCode',$res);
         //给指定的手机发送消息

@@ -10,7 +10,7 @@ class ThingModel extends Model
 //        $sql2 = Db::table("mq_user_study")->insert($data2);
 //        $sql3 = Db::table("mq_user_work")->insert($data3);
 //         $sql4 =  Db::table('mq_user_resume')->insert($data4);
-//            var_dump($sql1,$sql2,$sql3,$sql4);
+//            var_dump($sql4);
         Db::startTrans();//开启事物
         try{
             //基本信息

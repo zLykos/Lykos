@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>头部</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <!--<div class="scontainer header">
+        <div class="row">-->
+             <div class="col-lg-12 col-md-12 col-ms-12 col-xs-12 first-header">
+                      <div class="left-text">
+                          <i class="iconfont phone">&#xe625;</i>
+                          <span class="app"><a href="">名企APP</a></span>
+                          <span class="come-into"><a href="http://www.lykos.com/pages/search-talent.html">进入企业版</a></span>
+                      </div>
+                      <div></div>
+                 <div id="signIn">
+                     <span class="little-text"><a href="http://www.lykos.com/pages/cpy-password-SignIn.html">登录</a></span>
+                     <span class="little-text"><a href="http://www.lykos.com/pages/cpy-register.html">注册</a></span>
+                 </div>
+                 <div class="right-text" id="gou">
+                     <span id="hello"></span>
+                     <span class="little-text"><a href="">简历收录</a></span>
+                     <span class="little-text"><a href="">收藏夹</a></span>
+                     <span class="little-text"><a href="" id="SignOut">注销</a></span>
+                 </div>
+             </div>
+             <div class="col-lg-12 col-md-12 col-ms-12 col-xs-12 second-header">
+                 <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 col-xs-12 col-sm-12 second-header-box">
+                        <div class="header-logo">
+                            <a href="./serch-job.html"><img src="../images/enroll/logo.png" alt=""></a>
+                        </div>
+                        <div>
+                            <span class="header-nav"><a href="" style="color:#119ec7">首页</a></span>
+                            <span class="header-nav"><a href="http://www.lykos.com/pages/search-company.html">公司</a></span>
+                            <span class="header-nav"><a href="http://www.lykos.com/pages/serch-job.html">职位</a></span>
+                            <span class="header-nav"><a href="http://www.lykos.com/pages/youxiang.html">优单</a></span>
+                            <span class="header-nav"><a href="">社区</a></span>
+                            <span class="header-nav"><a href="http://www.lykos.com/pages/psl-Evaluation.html">测评</a></span>
+                        </div>
+                 </div>
+                 
+             </div>
+        <!--</div>
+
+    </div>-->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/layer/layer.min.js"></script>
+<script>
+    //判断是否登录过和注销(企业的)
+    $(document).ready(function(){
+        var login = $.cookie('ent');
+        $("#hello").html('您好，'+"<a href='http://www.lykos.com/pages/cpy-password-SignIn.html'>"+login+"</a>");
+        if(login == 'null' || login == undefined){
+            $("#signIn").show();
+            $("#gou").hide();
+        }else{
+            $("#gou").show();
+            $("#signIn").hide();
+        }
+        //注销
+        $("#SignOut").click(function(){
+            if(confirm("确定退出吗？")){
+                $.cookie('ent',null);
+            }
+            window.location.href="http://www.lykos.com/pages/serch-job.html";
+            $("#signIn").show();
+        });
+    });
+</script>
+</body>
+</html>

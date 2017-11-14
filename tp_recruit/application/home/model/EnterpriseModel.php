@@ -25,12 +25,24 @@ class EnterpriseModel extends Model{
 //        var_dump($res);
         return $res;
     }
-    public function searchTalent(){
+    //查询所有简历信息
+    public function searchTalent($pages,$Number){
 //        echo RegisterModel::getLastSql($res);
         $res = Db::table('mq_user_message')
         ->alias('a')
         ->join('mq_user_resume b','a.user_id = b.user_id')
+        ->limit($pages,$Number)
         ->select();
+//        echo RegisterModel::getLastSql($res);
         return $res;
     }
+    //查询简历的条数
+    public function number(){
+        $res = Db::table('mq_user_message')
+            ->alias('a')
+            ->join('mq_user_resume b','a.user_id = b.user_id')
+            ->count();
+        return $res;
+    }
+
 }

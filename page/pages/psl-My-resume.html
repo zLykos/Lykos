@@ -316,8 +316,12 @@
 <script src="../js/layer/layer.min.js"></script>
 <script src="../js/psl/psl-My-resume.js"></script>
 <script>
-    $("#header").load('headerpsl.html');
-    $("#footer").load('footer.html');
+    $(document).ready(function(){
+        var img = $.cookie('img');
+        $("#user_portrait").attr('src',img);
+        $("#header").load('headerpsl.html');
+        $("#footer").load('footer.html');
+    });
 </script>
 </body>
 </html>

@@ -99,7 +99,7 @@ $(document).ready(function () {
                     "<div/>"+"<hr/>");
                 $("#res_state").append("<div style='color: royalblue;'>" +
                     "<div>"+
-                    "<p>"+resume[i]['res_state']+"<p/>"+
+                    "<p>"+resume[i]['res_nature']+"<p/>"+
                     "<div/>"+
                     "<div/>"+"<hr/>")
 

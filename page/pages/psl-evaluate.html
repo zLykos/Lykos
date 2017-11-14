@@ -10,15 +10,13 @@
     <link rel="stylesheet" href="../css/appraise.css">
 </head>
 <body>
-     <!--<div class="container section">
-           <div class="row">
-               <div class="">
-                   
-               </div>
-           </div>
-    </div>-->
 <div class="information-Box">
-                        <div class="in-header"></div>
+                            <div id="thumburl1" class="in-header">
+                                <from id="fromthumburl" enctype="multipart/form-data">
+                                    <img  id="img1" alt="上传成功啦" src="http://www.text.com/static/img/1.jpg" width="100%" height="100%" />
+                                </from>
+                                <i  class="iconfont camera">&#xe643;</i>
+                            </div>
                         <div class="in-body">
                             <!--title-->
                             <div class='header-title'>
@@ -38,6 +36,12 @@
                                 <div class="information name fl">
                                     <input name="res_salary" id="res_salary" type="text" placeholder="期望薪资">
                                 </div>
+                                <div class="information name fl">
+                                    <input name="res_nature" id="res_nature" type="text" placeholder="现在工作状态">
+                                </div>
+                                <div class="information name fl">
+                                    <input name="res_city" id="res_city" type="text" placeholder="希望工作的地点">
+                                </div>
                                  <textarea name="res_evaluate" id="res_evaluate" placeholder="霸气的自我评价一下吧"></textarea>
                                  <textarea name="res_Interest" id="res_Interest" placeholder="介绍介绍自己的兴趣爱好吧"></textarea>
                             </form>
@@ -53,18 +57,10 @@
 <script src="../js/layer/layer.min.js"></script>
 <script src="../js/ajaxfileupload.js"></script>
 <script src='../js/psl/psl-basic-information.js'></script>
-<!--[if IE 8]> 
-<script> 
-   (function() {
-     if (! 
-     /*@cc_on!@*/
-     0) return;
-     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
-     var i= e.length;
-     while (i--){
-         document.createElement(e[i])
-     } 
-})() 
-</script>
-<![endif]-->
+ <script>
+     $(document).ready(function(){
+         var img = $.cookie('img');
+         $("#img1").attr('src',img);
+     });
+ </script>
 </body>

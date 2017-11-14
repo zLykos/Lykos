@@ -1,0 +1,18 @@
+#paging{
+    margin-left: 5%;
+}
+#pages>button{
+ width: 20px;
+ height: 25px;
+}
+#submit{
+    height: 20px;
+}
+#text{
+    width: 40px;
+    height: 20px;
+}
+#Nun{
+    color: #0016b0;
+    font-size:16px;
+}

@@ -32,18 +32,20 @@ $(document).ready(function(){
     //本地存储
     //基本信息
     $(".next1").click(function(){
+        var img1=$("#img1").attr('src');
+        $.cookie("img",img1);
         var data1 = {};
-        data1.user_portrait=$("#img1").attr('src');
+        data1.user_portrait=img1;
         data1.user_name=$("#user_name").val();
         data1.user_age=$("#user_age").val();
         data1.user_phone=$("#user_phone").val();
         data1.user_major=$("#user_major").val();
         //id是province的select中的option
-        data1.user_education=$('#user_education option:selected').text();
-        data1.user_degree=$('#user_degree option:selected').text();
+        data1.user_education=$("#user_education").find("option:selected").text();
+        data1.user_degree=$("#user_degree").find("option:selected").text();
         data1.user_mailbox=$("#user_mailbox").val();
         data1.user_address=$("#user_address").val();
-        data1.user_time=$("#user_time").val();
+        data1.user_time=$("#user_time").find("option:selected").text();
         data1.user_sex=$("#user_sex").val();
         data1.user_study=$("#user_study").val();
         //把数据压入key中
@@ -52,15 +54,13 @@ $(document).ready(function(){
     });
     //教育经历
     $(".next2").click(function (){
-        var info1=localStorage.getItem("info1");
-        console.log(info1);
         var data2 = {};
         data2.stu_school=$("#stu_school").val();
         data2.stu_major=$("#stu_major").val();
         data2.stu_address=$("#stu_address").val();
-        data2.stu_begintime=$('#stu_begintime option:selected').text();
-        data2.stu_endtime=$('#stu_endtime option:selected').text();
-        data2.stu_degree=$('#stu_degree option:selected').text();
+        data2.stu_begintime=$("#stu_begintime").find("option:selected").text();
+        data2.stu_endtime=$("#stu_endtime").find("option:selected").text();
+        data2.stu_degree=$("#stu_degree").find("option:selected").text();
         localStorage.setItem("info2",JSON.stringify(data2));
         window.location.href = "http://www.lykos.com/pages/psl-work-experience.html";
     });
@@ -70,10 +70,11 @@ $(document).ready(function(){
          data3.work_cor_name= $("#work_cor_name").val();
          data3.work_post= $("#work_post").val();
          data3.work_address=$("#work_address").val();
-         data3.work_bejintime=$('#work_bejintime option:selected').text();
-         data3.work_endtime=$('#work_endtime option:selected').text();
+         data3.work_bejintime=$("#work_bejintime").find("option:selected").text();
+         data3.work_endtime=$("#work_endtime").find("option:selected").text();
          data3.work_describe=$('#work_describe').val();
          localStorage.setItem("info3",JSON.stringify(data3));
+
         window.location.href = "http://www.lykos.com/pages/psl-evaluate.html";
 
     });
@@ -86,6 +87,8 @@ $(document).ready(function(){
         var data4 = {};
         data4.res_post = $("#res_post").val();
         data4.res_salary= $("#res_salary").val();
+        data4.res_city= $("#res_city").val();
+        data4.res_nature= $("#res_nature").val();
         data4.res_evaluate = $("#res_evaluate").val();
         data4.res_Interest = $("#res_Interest").val();
         localStorage.setItem("info4",JSON.stringify(data4));

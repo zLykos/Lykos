@@ -19,12 +19,12 @@
                       <div></div>
                  <div id="signIn">
                      <span class="little-text"><a href="http://www.lykos.com/pages/cpy-password-SignIn.html">登录</a></span>
-                     <span class="little-text"><a href="http://www.lykos.com/pages/cpy-register.html">注册</a></span>
+                     <span class="little-text"><a href="http://www.lykos.com/pages/cpy-register_mailbox.html">注册</a></span>
                  </div>
                  <div class="right-text" id="gou">
                      <span id="hello"></span>
-                     <span class="little-text"><a href="">简历收录</a></span>
-                     <span class="little-text"><a href="">收藏夹</a></span>
+                     <span class="little-text"><a href="http://www.lykos.com/pages/cpy-resume-Administration.html">简历收录</a></span>
+                     <span class="little-text"><a href="">职位发布</a></span>
                      <span class="little-text"><a href="" id="SignOut">注销</a></span>
                  </div>
              </div>
@@ -54,7 +54,7 @@
     //判断是否登录过和注销(企业的)
     $(document).ready(function(){
         var login = $.cookie('ent');
-        $("#hello").html('您好，'+"<a href='http://www.lykos.com/pages/cpy-password-SignIn.html'>"+login+"</a>");
+        $("#hello").html('您好，'+"<a href='http://www.lykos.com/pages/cpy-information.html'>"+login+"</a>");
         if(login == 'null' || login == undefined){
             $("#signIn").show();
             $("#gou").hide();

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-11-14 17:55:46
+Date: 2017-11-20 17:09:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,6 +32,23 @@ CREATE TABLE `mq_enter_course` (
 -- ----------------------------
 -- Records of mq_enter_course
 -- ----------------------------
+INSERT INTO `mq_enter_course` VALUES ('0', '3', '娿 请我请问qw', '请问去去', '我去操作', '', '请问撒r');
+
+-- ----------------------------
+-- Table structure for mq_enter_introduce
+-- ----------------------------
+DROP TABLE IF EXISTS `mq_enter_introduce`;
+CREATE TABLE `mq_enter_introduce` (
+  `id` int(11) NOT NULL COMMENT 'ID',
+  `ent_id` int(11) DEFAULT NULL COMMENT '公司ID',
+  `ent_introduce` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '公司介绍',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of mq_enter_introduce
+-- ----------------------------
+INSERT INTO `mq_enter_introduce` VALUES ('0', '3', '请问大家，kasjij ');
 
 -- ----------------------------
 -- Table structure for mq_enter_message
@@ -39,12 +56,15 @@ CREATE TABLE `mq_enter_course` (
 DROP TABLE IF EXISTS `mq_enter_message`;
 CREATE TABLE `mq_enter_message` (
   `id` int(11) NOT NULL,
+  `ent_id` int(11) DEFAULT NULL COMMENT '公司ID',
   `ent_name` varchar(12) DEFAULT '' COMMENT '公司名称',
+  `ent_website` varchar(64) DEFAULT NULL COMMENT '公司网址',
   `ent_address` varchar(64) DEFAULT '' COMMENT '公司地址',
   `ent_info` varchar(255) DEFAULT '' COMMENT '公司信息',
   `ent_scale` int(6) DEFAULT NULL COMMENT '公司规模',
   `ent_photo` varchar(64) DEFAULT '' COMMENT '公司招聘',
   `ent_contacts` varchar(6) DEFAULT '' COMMENT '公司联系人',
+  `ent_mailbox` varchar(64) DEFAULT NULL COMMENT '公司邮箱',
   `ent_phone` int(11) DEFAULT NULL COMMENT '公司电话',
   `ent_portrait` varchar(225) DEFAULT NULL COMMENT '公司照片'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -52,6 +72,7 @@ CREATE TABLE `mq_enter_message` (
 -- ----------------------------
 -- Records of mq_enter_message
 -- ----------------------------
+INSERT INTO `mq_enter_message` VALUES ('0', '3', '空间和老公去哪', '请我请问去请问去', '请问去', '移动互联网', '20', '', '请我q', '我去切切', '0', 'http://www.text.com/static/img/1.jpg');
 
 -- ----------------------------
 -- Table structure for mq_enter_recruit
@@ -85,12 +106,12 @@ CREATE TABLE `mq_enter_register` (
   `ent_ip` varchar(16) DEFAULT '' COMMENT '注册地址ip',
   `ent_time` varchar(24) DEFAULT '' COMMENT '注册账户时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mq_enter_register
 -- ----------------------------
-INSERT INTO `mq_enter_register` VALUES ('1', '1299644074@qq.com', '490640b43519c77281cb2f8471e61a71', '1393', '127.0.0.1', '1510280648');
+INSERT INTO `mq_enter_register` VALUES ('3', '1299644074@qq.com', 'b3f445b0ff5a783ec652cdf8e669a9bf', '6613', '127.0.0.1', '1511150186');
 
 -- ----------------------------
 -- Table structure for mq_enter_resume
@@ -99,7 +120,7 @@ DROP TABLE IF EXISTS `mq_enter_resume`;
 CREATE TABLE `mq_enter_resume` (
   `id` int(11) NOT NULL,
   `ent_id` int(11) DEFAULT NULL COMMENT '企业id',
-  `resume_id` int(11) DEFAULT NULL COMMENT '简历id',
+  `user_id` int(11) DEFAULT NULL COMMENT '简历id',
   `ent_post` varchar(12) DEFAULT '' COMMENT '用户投递的岗位',
   `ent_time` varchar(0) DEFAULT '' COMMENT '用户投递的时间',
   `ent_state` int(2) DEFAULT NULL COMMENT '返回给用户的状态',
@@ -109,6 +130,7 @@ CREATE TABLE `mq_enter_resume` (
 -- ----------------------------
 -- Records of mq_enter_resume
 -- ----------------------------
+INSERT INTO `mq_enter_resume` VALUES ('1', '1', '1', '1', '', '1');
 
 -- ----------------------------
 -- Table structure for mq_user_delivery
@@ -148,16 +170,12 @@ CREATE TABLE `mq_user_message` (
   `user_study` varchar(125) DEFAULT NULL COMMENT '毕业学校',
   `user_time` char(32) DEFAULT NULL COMMENT '工作年限',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of mq_user_message
 -- ----------------------------
-INSERT INTO `mq_user_message` VALUES ('35', '1', '张三', '男', '148岁', '卡里面看了人齐了欧赔', '2147483647', '5165468464@qq.com', '大专', '计算机', '博士', 'http://www.text.com/static/img/1.jpg', '四川科技大学', '1-3年');
-INSERT INTO `mq_user_message` VALUES ('37', '2', '李四', '男', '32岁', '飒飒凄凄切切', '241241351', '去玩$_$ ', '研究生', '其味无穷', '博士', 'http://www.text.com/static/img/1510283775.jpg', '来交流群', '10年以上');
-INSERT INTO `mq_user_message` VALUES ('38', '3', '网吧', '女', '99岁', '砸是啊啊', '541151436', '我去去', '大专', '我去', '硕士', 'http://www.text.com/static/img/1510284103.jpg', '退款', '2');
-INSERT INTO `mq_user_message` VALUES ('39', '4', '期望期望', '男', '期望去', ' 切位去 ', '581346886', '我去去', '研究生', '我去去q', '研究生', 'http://www.text.com/static/img/1510284275.jpg', '切位 去', '3');
-INSERT INTO `mq_user_message` VALUES ('42', '5', '天王盖地虎', '男', '2222岁', '价位，你厉害了目前拉我进去', '2147483647', '44254224@qqcom', '硕士', '你知道的', '博士', 'http://www.text.com/static/img/1.jpg', '搬山道人', '5-10年');
+INSERT INTO `mq_user_message` VALUES ('43', '6', '张三', '男', '18岁', 'ajwekq nklqnbliu  ', '2147483647', '12996440774@qq.com', '硕士', '瓦聚集', '研究生', 'http://www.text.com/static/img/1.jpg', '山东南翔', '3-5年');
 
 -- ----------------------------
 -- Table structure for mq_user_register
@@ -172,13 +190,12 @@ CREATE TABLE `mq_user_register` (
   `user_ip` varchar(20) CHARACTER SET utf8 DEFAULT '' COMMENT '用户ip',
   `user_addtime` varchar(11) CHARACTER SET utf8 DEFAULT '' COMMENT '用户注册时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of mq_user_register
 -- ----------------------------
-INSERT INTO `mq_user_register` VALUES ('5', null, '1299644074@qq.com', '82d0e1beec7c6f769b97b4420a384716', '7412', '127.0.0.1', '1510285359');
-INSERT INTO `mq_user_register` VALUES ('4', '18702824781', '', 'c9f2f917078bd2db12f23c3b413d9cba', '9940', '127.0.0.1', '1510280434');
+INSERT INTO `mq_user_register` VALUES ('6', '18702824781', '', 'ee715daa76f1b51d80343f45547be570', '8235', '127.0.0.1', '1511149198');
 
 -- ----------------------------
 -- Table structure for mq_user_resume
@@ -194,16 +211,12 @@ CREATE TABLE `mq_user_resume` (
   `res_Interest` varchar(255) COLLATE utf8_unicode_ci DEFAULT '' COMMENT '兴趣爱好',
   `res_evaluate` varchar(255) COLLATE utf8_unicode_ci DEFAULT '' COMMENT '自我评价',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of mq_user_resume
 -- ----------------------------
-INSERT INTO `mq_user_resume` VALUES ('21', '4', '15151515', '成都市', '5-8K', '可以随时上岗', '52352535253发发发 ', '抢我23562525');
-INSERT INTO `mq_user_resume` VALUES ('23', '1', 'SaaS ', '德阳市', '9-10k', '待业', '我去额去', '驱蚊器');
-INSERT INTO `mq_user_resume` VALUES ('24', '2', '尽快吧', '内江市', '100K', '随时上岗', '我说的阿发 ', '我去去$_$31 5是否按时a');
-INSERT INTO `mq_user_resume` VALUES ('25', '3', '我去去去', '北京市', '55K', '随时上岗', '申请安稳去啊', '萨尔阿沙文');
-INSERT INTO `mq_user_resume` VALUES ('28', '5', '各位天王无头无尾', '北海市', '66K', '待业', '玩儿我温柔', '位我');
+INSERT INTO `mq_user_resume` VALUES ('29', '6', '去看篮球了 ', '理我理我', '离去开会lih8o', '；哦考核', '去，困了就去了llqeijln', '其他了清洁');
 
 -- ----------------------------
 -- Table structure for mq_user_study
@@ -219,17 +232,12 @@ CREATE TABLE `mq_user_study` (
   `stu_degree` varchar(32) CHARACTER SET utf8 DEFAULT '' COMMENT '当时学位',
   `stu_address` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of mq_user_study
 -- ----------------------------
-INSERT INTO `mq_user_study` VALUES ('34', '4', '2016年', '2015年', '我确认去', '申请人确认', '高中', '去玩阿发');
-INSERT INTO `mq_user_study` VALUES ('35', '4', '申请去', '请问请问', '请问去', '王企鹅', '切位我去', '切位而且');
-INSERT INTO `mq_user_study` VALUES ('32', '1', '2013年', '2013年', '我QQ去', '我去去 ', '本科', '去玩2112 ');
-INSERT INTO `mq_user_study` VALUES ('36', '2', '2015年', '2014年', '去前任 去撒', 'da 请问as ', '大专', '我去 4啊');
-INSERT INTO `mq_user_study` VALUES ('37', '3', '2012年', '2015年', '我的按时去', '切位去是切位', '本科', '切位去 位前期强势去啊啊撒钱s');
-INSERT INTO `mq_user_study` VALUES ('40', '5', '2015年', '2015年', '。卡啦', '我去去', '大专', '切位企鹅 ');
+INSERT INTO `mq_user_study` VALUES ('41', '6', '2014年', '2014年', '我去去去去 ', 's理解和融期货', '大专', '空间上电脑关了哈是你好');
 
 -- ----------------------------
 -- Table structure for mq_user_work
@@ -245,17 +253,12 @@ CREATE TABLE `mq_user_work` (
   `work_describe` varchar(255) COLLATE utf8_unicode_ci DEFAULT '' COMMENT '岗位描述',
   `work_address` varchar(64) COLLATE utf8_unicode_ci DEFAULT '' COMMENT '工作地点',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of mq_user_work
 -- ----------------------------
-INSERT INTO `mq_user_work` VALUES ('25', '4', '2017年', '2011年', '1241451 ', '2412411', '12415213512515', '2412414');
-INSERT INTO `mq_user_work` VALUES ('27', '1', '本科', '10年以上', '去玩而我QQ ', '千万钱 ', '请问去去请问$_$请问', '驱蚊器是啊');
-INSERT INTO `mq_user_work` VALUES ('28', '4', '驱蚊器', '期望期望', '期望驱蚊器', '期望期望', '期望期望', '期望去');
-INSERT INTO `mq_user_work` VALUES ('29', '2', '本科', '2142年', '期望钱 q', '请$_$去', '$_$去去去 期望q', '4期望去');
-INSERT INTO `mq_user_work` VALUES ('30', '3', '研究生', '2415年', '切位飒飒', '我去是安稳as', '切位 大阿发日期申请人是', '确定艾萨was');
-INSERT INTO `mq_user_work` VALUES ('33', '5', '本科', '5-10年', '人员热', '电饭锅个', '当事人我 ', ' 水电费是');
+INSERT INTO `mq_user_work` VALUES ('34', '6', '硕士', '10年以上', 'p拉开始了马来', 'sfoqji', 'u快和我聊天', '阿里加就');
 
 -- ----------------------------
 -- Table structure for rs_pc_areas

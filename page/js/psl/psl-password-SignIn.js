@@ -73,11 +73,13 @@
                         window.location.href="http://www.lykos.com/pages/serch-job.html";
                     }
                     if( data == 1 ){
+                        $("#captcha").attr("src","http://www.text.com/index.php/home/Start/verificationCode?a="+Math.random());
                         layer.msg('密码错误...', {icon: 2});
                         //alert("注册失败");
                         return false;
                     }
                     if(data == 2){
+                        $("#captcha").attr("src","http://www.text.com/index.php/home/Start/verificationCode?a="+Math.random());
                         layer.msg('用户不存在...', {icon: 2});
                         return false;
                     }

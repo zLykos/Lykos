@@ -11,12 +11,12 @@
 </head>
 <body>
     <div class="information-Box">
-                        <div id="thumburl1" class="in-header">
-                        	<from id="fromthumburl" enctype="multipart/form-data">
-                        		<input  id="imgButton" type="file" class="file-box" name="file" />
-                        	</from>
-                        	<i  class="iconfont camera">&#xe643;</i>
-                        </div>
+        <div id="thumburl1" class="in-header">
+            <from id="fromthumburl" enctype="multipart/form-data">
+                <img  id="img1" alt="上传成功啦" src="http://www.text.com/static/img/1.jpg" width="100%" height="100%" />
+            </from>
+            <i  class="iconfont camera">&#xe643;</i>
+        </div>
                         <div class="in-body">
                             <!--title-->
                             <div class='header-title'>
@@ -24,40 +24,41 @@
                                 <div class="lines title"></div>
                                 <div class="t itle">公司介绍</div>
                                 <div class="lines title lines2"></div>
-                                <div class="title">发展历程</div>
+                                <div class="title" style="color: #008200;">发展历程</div>
                                 <!--<div class="lines title lines3"></div>
                                 <div class="title">自我评价</div>-->
                             </div>
                             <div class="boder"></div>
                             <form id="company-h" action="" name="myform">
 
-                                <div class="information phone"><input type="text" name="time" id="event-time" placeholder="时间"></div>
-                                <div class="information phone"><input type="text" name="title" id="event-time" placeholder="标题"></div>
-                                <textarea name="description" id="title" placeholder="请输入50字简单说下公司的历程吧"  wrap="virtual" onkeypress="return(this.value.length<50)" onkeydown="textlen(this,50)" onkeyup="textlen(this,50)" onblur="maxtext(this,50)"></textarea>
+                                <div class="information phone">
+                                    <input type="text" name="ent_begintime" id="ent_begintime" placeholder="启始时间">
+                                </div>
+                                <div class="information phone">
+                                    <input type="text" name="ent_endtime" id="ent_endtime" placeholder="结束时间">
+                                </div>
+                                <div class="information phone">
+                                    <input type="text" name="ent_scale" id="ent_scale" placeholder="公司规模">
+                                </div>
+                                <div class="information phone">
+                                    <input type="text" name="ent_honor" id="ent_honor" placeholder="公司成就">
+                                </div>
+                                <textarea name="ent_project" id="ent_project" placeholder="请输入50字简单说下这段时间的历程吧"></textarea>
                             </form>
                                 <div class="add">
-                                    <a href="company-about.html">返回</a>
+                                    <a href="http://www.lykos.com/pages/cpy-basic-information.html">返回</a>
                                 </div>
-                            <div type="botton" id="next">下一步</div>
+                            <div type="botton" class="next3" id="next">提交</div>
                         </div>
                    </div>
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/jquery.cookie.js"></script>
 <script src="../js/layer/layer.min.js"></script>
-<script src="../js/base.js"></script>
-<script src='../js/Company-H.js'></script>
-<!--[if IE 8]> 
-<script> 
-   (function() {
-     if (! 
-     /*@cc_on!@*/
-     0) return;
-     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
-     var i= e.length;
-     while (i--){
-         document.createElement(e[i])
-     } 
-})() 
-</script>
-<![endif]-->
+<script src="../js/cpy/cpy-basic-information.js"></script>
+    <script>
+        $(document).ready(function(){
+            var img = $.cookie('img');
+            $("#img1").attr('src',img);
+        });
+    </script>
 </body>

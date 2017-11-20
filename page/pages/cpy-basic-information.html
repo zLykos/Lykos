@@ -12,16 +12,15 @@
 </head>
 <body>
     <div class="information-Box">
-		                <div class="in-header" id="thumburl1">	
-	                        <from id="fromthumburl" enctype="multipart/form-data">
-	                        	<input  id="imgButton" type="file" class="file-box" name="file" />
-	                        </from><i  class="iconfont camera">&#xe643;</i>
-                        </div>
+        <div id="thumburl1" class="in-header">
+            <input type="file" id="file1" name="file"  class="file-box" />
+            <img  id="img1" alt="上传成功啦" src="http://www.text.com/static/img/1.jpg" width="100%" height="100%" />
+            <i class="iconfont camera">&#xe643;</i></div>
 
                         <div class="in-body">
                             <!--title-->
                             <div class='header-title'>
-                                <div class="title">基本信息</div>
+                                <div class="title" style="color: #008200;">基本信息</div>
                                 <div class="lines title"></div>
                                 <div class="title">公司介绍</div>
                                 <div class="lines title lines2"></div>
@@ -31,14 +30,20 @@
                             </div>
                             <div class="boder"></div>
                             <form id="company-in" action="">
-                                <div class="information"><input name="companyname" type="text" placeholder="公司名称"></div>
-                                <div class="information phone"><input name="comurl" id="comurl" type="text" placeholder="公司网址"></div>
-                                <select name="industry" id="" class="first-select se-One">
+                                <div class="information name fl"  style="width: 35%">
+                                    <input name="ent_name" id="ent_name" type="text" placeholder="公司名称">
+                                </div>
+                                <div class="information name fl" style="width: 35%">
+                                    <input name="ent_contacts" id="ent_contacts" type="text" placeholder="联系人">
+                                </div>
+                                <div style="clear: both"></div>
+                                <div class="information phone"><input name="ent_website" id="ent_website" type="text" placeholder="公司网址"></div>
+                                <select name="industry" id="ent_info" class="first-select se-One">
                                     <option value="">行业归属</option>
                                     <option value="101">互联网</option>
                                     <option value="102">移动互联网</option>
                                 </select>
-                                <select name="scale" id="" class="se-One">
+                                <select name="scale" id="ent_scale" class="se-One">
                                     <option value="">公司规模</option>
                                     <option value="101">20人以下</option>
                                     <option value="102">20-50人</option>
@@ -46,52 +51,18 @@
                                     <option value="104">100-500人</option>
                                     <option value="105">500人以上</option>                                    
                                 </select>
-                                <div class="information phone"><input name="hremail" type="text" placeholder="邮箱"></div>
-                                 <select name="city" id="" class="city">
-                                    <option value="">所在城市</option>
-                                    <option value="510100">成都</option>
-                                </select>
+                                <div class="information phone"><input name="ent_mailbox" id="ent_mailbox" type="text" placeholder="公司邮箱"></div>
+                                <div class="information phone"><input name="ent_phone" id="ent_phone" type="text" placeholder="公司电话"></div>
+                                <div class="information phone"><input name="ent_address" id="ent_address" type="text" placeholder="公司地址"></div>
                                  <div class="information phone"><input type="text" name="address" id="company-address" placeholder="公司具体地址"></div>
                             </form>
                             <div class="tixoin"></div>
-                            <div type="botton" id="next">下一步</div>
+                            <div type="botton " class="next1" id="next">下一步</div>
                         </div>
                    </div>
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/jquery.cookie.js"></script>
 <script src="../js/layer/layer.min.js"></script>
-<script src="../js/base.js"></script>
-<script src='../js/company-in.js'></script>
- <script>
-        $(function () {
-            $("#imgButton").change(function () {
-                var formData = new FormData();
-                formData.append("file", document.getElementById("imgButton").files[0]);
-                formData.append('pictype','avatar_c');   
-                console.log(document.getElementById("imgButton").files[0]);
-                $.ajax({
-                    url: "http://127.0.0.1/mingqi/index.php/file/upload/upsingle",
-                    type: "POST",
-                    data: formData,
-                    contentType: false,
-                    processData: false,
-                    success: function (data) {
-                    	console.log(data);
-                        if (data.status == "1") {
-                            $("#thumburl1").html('<img src="http://127.0.0.1/mingqi/public/uploads/'+data.url+'"/>');
-                            $(".in-header").addClass("in-header2")
-                        }
-                        if (data.status == "0") {
-                            alert(data.msg);
-                        }
-                       
-                    },
-                    error: function () {
-                        alert("上传失败！");
-                    }
-                });
-            });
-        });
-    </script>
-<![endif]-->
+<script src="../js/ajaxfileupload.js"></script>
+<script src="../js/cpy/cpy-basic-information.js"></script>
 </body>

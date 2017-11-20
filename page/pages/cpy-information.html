@@ -17,34 +17,18 @@
              <div class="col-lg-12 col-md-12 col-ms-12 col-xs-12">
                  <div class="master col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
                        <div class="large-box col-lg-8 col-md-8">
-                                <div class="head"></div>
+                                <div class="head">
+                                    <img src="" id="user_portrait"/>
+                                </div>
                                 <div class="heade-text">
-                                     <h3><span id="title">百词斩</span> <span><i class="iconfont link">&#xe61e;</i></span></h3>
-                                      <p>有趣有爱做教育，打造英语大杀器</p>
+                                     <h3><span id="ent_name"></span> <span><i class="iconfont link">&#xe61e;</i></span></h3>
                                       <div class="foush">
                                           <div><i class="iconfont head-icon">&#xe683;</i> &nbsp;<span id="industry"></span></div>
                                           <div>
                                               <i class="iconfont head-icon">&#xe721;</i>
-                                               <select name="" id="">
-                                                   <option value="0">不需要融资</option>
-                                                   <option value="1">初创型（未融资）</option>
-                                                   <option value="2">成长型（A轮）</option>
-                                                   <option value="3">成长型（B轮）</option>
-                                                   <option value="4">成熟型（C轮）</option>
-                                                   <option value="5">已上市</option>
-                                               </select>
                                             </div>
-                                          <div>
-                                              <i class="iconfont head-icon">&#xe69f;</i>
-                                              <select name="" id="">
-                                                  <option value="0">20人以下</option>
-                                                  <option value="1">20-50人</option>
-                                                  <option value="2">50-150人</option>
-                                                  <option value="3">150-500人</option>
-                                                  <option value="4">500人以上</option>
-                                              </select>
+                                          <div id="ent_scale">
                                            </div>
-                                          <div><i class="iconfont head-icon">&#xe884;</i> 成都</div> 
                                       </div>
                                 </div>
                                 <div class="basic-information">
@@ -56,8 +40,10 @@
                                          <span class="bianji1"><i class="iconfont little-icon">&#xe617;</i>编辑</span>
                                     </div>
                                     <div class="passages">
-                                            <p id="description">
-                                            </p>
+                                        <p id="ent_website"></p>
+                                        <p id="ent_info"></p>
+                                        <p id="ent_mailbox"></p>
+                                        <p id="ent_phone"></p>
                                     </div>
                                     <!--基本信息编辑框-->
                                     <div id="bianji-information" class="bianji-information">
@@ -81,6 +67,8 @@
                                     <div id="milepost">
                                     </div>
                                     <div class="fp-add"><i class="iconfont little-icon">&#xe60a;</i>添加</div>
+                                    <div id="ent_introduce">
+                                    </div>
                                     <!--发展历程编辑框-->
                                     <div class="bianji-information" id="boianji-herstory">
                                         <form action="" name="myform">
@@ -111,10 +99,10 @@
                                          <div class="f-nirst">
                                             <div class="cirlic"></div>
                                             <span>公司位置</span>
-                                            <div id="position">具体位置</div>
                                          </div>
                                          <span><i class="iconfont little-icon">&#xe617;</i>编辑</span>
                                     </div>
+                                     <div id="ent_address"></div>
                                     <div class="map" id="container">
                                             
                                     </div>
@@ -193,6 +181,11 @@
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/jquery.cookie.js"></script>
 <script src="../js/layer/layer.min.js"></script>
+<script src="../js/cpy/cpy-information.js"></script>
+ <script>
+     $("#header").load('headercpy.html');
+     $("#footer").load('footer.html');
+ </script>
 </body>
 
 </html>

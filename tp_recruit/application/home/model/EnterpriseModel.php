@@ -27,7 +27,7 @@ class EnterpriseModel extends Model{
     }
     //查询所有简历信息
     public function searchTalent($pages,$Number){
-//        echo RegisterModel::getLastSql($res);
+
         $res = Db::table('mq_user_message')
         ->alias('a')
         ->join('mq_user_resume b','a.user_id = b.user_id')
@@ -35,6 +35,20 @@ class EnterpriseModel extends Model{
         ->select();
 //        echo RegisterModel::getLastSql($res);
         return $res;
+    }
+    public function enterTalent($pages,$Number,$ent_id){
+        $res = Db::table('mq_user_message')
+            ->alias('a')
+            ->join('mq_user_resume b','a.user_id = b.user_id')
+            ->join('mq_enter_resume c','a.user_id = c.user_id')
+            ->where("c.ent_id",$ent_id)
+            ->limit($pages,$Number)
+            ->select();
+        echo RegisterModel::getLastSql($res);
+        return $res;
+    }
+    public function entTalent(){
+
     }
     //查询简历的条数
     public function number(){
@@ -44,5 +58,4 @@ class EnterpriseModel extends Model{
             ->count();
         return $res;
     }
-
 }

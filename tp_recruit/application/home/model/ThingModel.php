@@ -4,7 +4,7 @@ use think\Model;
 use think\Db;
 class ThingModel extends Model
 {
-    public function Thing($data1, $data2, $data3, $data4)
+    public function userThing($data1, $data2, $data3, $data4)
     {
 //        $sql1 = Db::table("mq_user_message")->insert($data1);
 //        $sql2 = Db::table("mq_user_study")->insert($data2);
@@ -28,6 +28,28 @@ class ThingModel extends Model
             return false;
         }
     }
+    public function enterThing($data1, $data2, $data3)
+    {
+////        $sql1 = Db::table("mq_enter_message")->insert($data1);
+////        $sql2 = Db::table("mq_enter_introduce")->insert($data2);
+//        $sql3 = Db::table("mq_enter_course")->insert($data3);
+//                    var_dump($data3);
+        Db::startTrans();//开启事物
+        try{
+            //基本信息
+            Db::table("mq_enter_message")->insert($data1);
+            //教育经历
+            Db::table("mq_enter_introduce")->insert($data2);
+            //工作经历
+            Db::table("mq_enter_course")->insert($data3);
+            //自我评价
+            Db::commit(); //事物提交
+            return true;
+        }catch (\Exception $e){
+            Db::rollback(); //事物回滚
+            return false;
+        }
+    }
     public function ThingJoin($id){
 //        $res = Db::table('mq_user_message')
 //                ->alias('a')
@@ -42,7 +64,13 @@ class ThingModel extends Model
         $sql4 =Db::table('mq_user_resume')->where('user_id',$id)->select();
         $res= array($sql1,$sql2,$sql3,$sql4);
         return $res;
-
+    }
+    public function EnterJoin($id){
+        $sql1 =Db::table('mq_enter_message')->where('ent_id',$id)->select();
+        $sql2 =Db::table('mq_enter_introduce')->where('ent_id',$id)->select();
+        $sql3 =Db::table('mq_enter_course')->where('ent_id',$id)->select();
+        $res= array($sql1,$sql2,$sql3);
+        return $res;
     }
 }
 

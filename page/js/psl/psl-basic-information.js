@@ -1,4 +1,4 @@
-//头像
+//用户头像
 $(function(){
     $("#file1").change(function(){
         Photo();

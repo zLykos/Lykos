@@ -36,4 +36,8 @@ class RegisterModel extends Model{
 //        var_dump($res);
         return $res;
     }
+    public function resume($data){
+        $res = Db::name('mq_enter_resume')->insert($data);
+        return $res;
+    }
 }

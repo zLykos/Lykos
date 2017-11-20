@@ -43,15 +43,20 @@
                     <div class="work-space">
                          <span>工作区域 ：</span>
                          <a href=""class="active">不限</a>
-                         <a href="">全国</a>
-                         <a href="">成都</a>
-                         <a href="">成都</a>
-                         <a href="">成都</a>
-                         <a href="">成都</a>
-                         <a href="">成都</a>
-                         <a href="">成都</a>
-                         <a href="">成都</a>
-                         <a href="">成都</a>
+                        省：
+                        <select id="province" style="width: 100px;">
+                            <option>请选择</option>
+                        </select>
+                        <!-- 市-->
+                        城市：
+                        <select id="city">
+                            <option>请选择</option>
+                        </select>
+                        <!-- 区-->
+                        区域：
+                        <select id="area">
+                            <option>请选择</option>
+                        </select>
                          <a id="more">更多
                              <i class="iconfont">&#xe662;</i>
                          </a>
@@ -209,7 +214,8 @@
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/jquery.cookie.js"></script>
 <script src="../js/layer/layer.min.js"></script>
-<script src="../js/cpy/search-talent.js"></script>
+<script src="../js/Pub/search-talent.js"></script>
+<script src="../js/Pub/public.js"></script>
 <script src="../js/cpy/cpy-talent-recommendation.js"></script>
 <script>
     $("#header").load('headercpy.html');

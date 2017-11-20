@@ -6,6 +6,7 @@ $(document).ready(function(){
         var ent_mailbox = $("#ent_SignIn").val();
         var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
            if(!myreg.test(ent_mailbox)) {
+               $("#captcha").attr("src","http://www.text.com/index.php/home/Enterprise/verificationCode?a="+Math.random());
                layer.msg('账号格式错误...', {icon: 2});
            }else{
             //邮箱登录
